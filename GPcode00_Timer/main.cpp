@@ -8,6 +8,7 @@ StopWatch stopWatch;
 bool started = false;
 
 void Draw(int i) {
+	// drawing clock
 	double d;
 	glPushMatrix();
 	glRotatef(i*6, 0,0,1);
