@@ -1,0 +1,123 @@
+TTimer
+v7
+r0
+t416195074.291002
+cCheck dependencies
+cCompileC build/Timer.build/Debug/Timer.build/Objects-normal/x86_64/main.o /Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/Timer.build/Debug/Timer.build/Objects-normal/x86_64/StopWatch.o /Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/StopWatch.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cLd /Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Debug/Timer normal x86_64
+
+N/Developer-3.2.5/SDKs/MacOSX10.6.sdk
+c000000004CAA740B00000000000000EE
+t1286239243
+s238
+
+N/Developer-3.2.5/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/GLUT.framework/GLUT
+c000000004CAA7405000000000001A494
+t1286239237
+s107668
+
+N/Developer-3.2.5/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h
+c000000004C23CCCC000000000000578C
+t1277414604
+s22412
+
+N/Developer-3.2.5/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL
+c000000004CAA7405000000000000DB14
+t1286239237
+s56084
+
+N/Developer-3.2.5/SDKs/MacOSX10.6.sdk/usr/include/stdio.h
+c000000004BBD2CE90000000000004174
+t1270689001
+s16756
+
+N/Developer-3.2.5/SDKs/MacOSX10.6.sdk/usr/include/stdlib.h
+c000000004BBD2CE90000000000002DF5
+t1270689001
+s11765
+
+N/Developer-3.2.5/SDKs/MacOSX10.6.sdk/usr/include/sys/time.h
+c000000004C2399480000000000001E17
+t1277401416
+s7703
+
+N/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/StopWatch.cpp
+c00000000531923B1000000000000043C
+t1394156465
+s1084
+i"StopWatch.h"
+
+N/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/StopWatch.h
+c00000000531E6A810000000000000349
+t1394502273
+s841
+i<windows.h>
+i<sys/time.h>
+
+N/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Debug/Timer
+t1394502274
+s16832
+
+N/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Timer.build/Debug/Timer.build/Objects-normal/x86_64/StopWatch.o
+t1394502273
+s5704
+
+N/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Timer.build/Debug/Timer.build/Objects-normal/x86_64/Timer.LinkFileList
+c00000000531923B10000000000000105
+t1394156465
+s261
+
+N/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Timer.build/Debug/Timer.build/Objects-normal/x86_64/main.o
+t1394502273
+s10524
+
+N/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/main.cpp
+c00000000531D434200000000000006B2
+t1394426690
+s1714
+i<stdio.h>
+i<stdlib.h>
+i<GLUT/GLUT.h>
+i"StopWatch.h"
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies416195073#416195073#0(0"0(0#1#0"4319178752#0"0#
+
+CCompileC build/Timer.build/Debug/Timer.build/Objects-normal/x86_64/StopWatch.o /Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/StopWatch.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s416195073.175647
+e416195073.861758
+r1
+xCompileC
+xbuild/Timer.build/Debug/Timer.build/Objects-normal/x86_64/StopWatch.o
+x/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/StopWatch.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@84"Compile /Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/StopWatch.cpp416195073#416195073#0(0"0(0#0#76"/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/StopWatch.cpp4319178752#1541"    cd /Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer    setenv LANG en_US.US-ASCII    /Developer-3.2.5/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer-3.2.5/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Timer.build/Debug/Timer.build/Timer-generated-files.hmap -I/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Timer.build/Debug/Timer.build/Timer-own-target-headers.hmap -I/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Timer.build/Debug/Timer.build/Timer-all-target-headers.hmap -iquote /Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Timer.build/Debug/Timer.build/Timer-project-headers.hmap -F/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Debug -I/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Debug/include -I/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Timer.build/Debug/Timer.build/DerivedSources/x86_64 -I/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Timer.build/Debug/Timer.build/DerivedSources -c /Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/StopWatch.cpp -o /Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Timer.build/Debug/Timer.build/Objects-normal/x86_64/StopWatch.o0#
+
+CCompileC build/Timer.build/Debug/Timer.build/Objects-normal/x86_64/main.o /Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s416195073.142033
+e416195073.973923
+r1
+xCompileC
+xbuild/Timer.build/Debug/Timer.build/Objects-normal/x86_64/main.o
+x/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@79"Compile /Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/main.cpp416195073#416195073#0(0"0(0#0#71"/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/main.cpp4319178752#1531"    cd /Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer    setenv LANG en_US.US-ASCII    /Developer-3.2.5/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer-3.2.5/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Timer.build/Debug/Timer.build/Timer-generated-files.hmap -I/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Timer.build/Debug/Timer.build/Timer-own-target-headers.hmap -I/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Timer.build/Debug/Timer.build/Timer-all-target-headers.hmap -iquote /Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Timer.build/Debug/Timer.build/Timer-project-headers.hmap -F/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Debug -I/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Debug/include -I/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Timer.build/Debug/Timer.build/DerivedSources/x86_64 -I/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Timer.build/Debug/Timer.build/DerivedSources -c /Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/main.cpp -o /Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Timer.build/Debug/Timer.build/Objects-normal/x86_64/main.o0#
+
+CLd /Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Debug/Timer normal x86_64
+s416195073.973995
+e416195074.290957
+r1
+xLd
+x/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Debug/Timer
+xnormal
+xx86_64
+lSLF07#2@85"Link /Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Debug/Timer416195073#416195074#0(0"0(0#0#0"4319178752#656"    cd /Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer-3.2.5/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer-3.2.5/SDKs/MacOSX10.6.sdk -L/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Debug -F/Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Debug -filelist /Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Timer.build/Debug/Timer.build/Objects-normal/x86_64/Timer.LinkFileList -mmacosx-version-min=10.6 -framework GLUT -framework OpenGL -o /Users/ymkang/myWork_iMac/Mac_2_Lectures/2014GamePhysics/Timer/build/Debug/Timer0#
+
