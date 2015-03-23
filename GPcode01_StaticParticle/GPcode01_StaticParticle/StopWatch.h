@@ -1,14 +1,28 @@
-//
-//  StopWatch.h
-//  GPcode01_StaticParticle
-//
-//  Created by young-min kang on 3/12/15.
-//  Copyright (c) 2015 young-min kang. All rights reserved.
-//
+#ifndef _STOPWATCH_YMKANG_H
+#define _STOPWATCH_YMKANG_H
 
-#ifndef __GPcode01_StaticParticle__StopWatch__
-#define __GPcode01_StaticParticle__StopWatch__
+#ifdef WIN32   // Windows system specific
+#include <windows.h>
+#else          // Unix based system specific
+#include <sys/time.h>
+#endif
 
-#include <stdio.h>
+class StopWatch {
+#ifdef WIN32
+    LARGE_INTEGER frequency;                    // ticks per second
+    LARGE_INTEGER startCount;                   //
+    LARGE_INTEGER endCount;                     //
+#else
+    timeval startCount;                         //
+    timeval endCount;                           //
+#endif
+    double startTimeInMicroSec;
+    double endTimeInMicroSec;
+public:
+    StopWatch();
+    void start();                // start StopWatch and record time to "startCount"
+    void stop();                // stop StopWatch and record time to "endCount"
+    double getElapsedTime();    // return the elapsed time at the last stop since the last start (microsec)
+};
 
-#endif /* defined(__GPcode01_StaticParticle__StopWatch__) */
+#endif
