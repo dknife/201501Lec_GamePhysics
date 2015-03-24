@@ -1,3 +1,8 @@
+# power point and hwp
+*.hwp
+*.ppt
+*.pptx
+
 # Compiled Object files
 *.slo
 *.lo
