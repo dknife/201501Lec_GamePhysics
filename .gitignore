@@ -3,6 +3,15 @@
 *.ppt
 *.pptx
 
+# VC project related files
+*.suo
+*.idb
+*.tlog
+*.log
+*.vcxproj
+*.vcxproj.filters
+*.lastbuildstate
+
 # Compiled Object files
 *.slo
 *.lo
