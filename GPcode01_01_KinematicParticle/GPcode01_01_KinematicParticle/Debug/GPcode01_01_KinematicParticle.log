@@ -1,0 +1,23 @@
+﻿Build started 2015-03-26 오전 9:50:00.
+     1>Project "C:\YMKang_Work\lecture\201501Lec_GamePhysics\GPcode01_01_KinematicParticle\GPcode01_01_KinematicParticle\GPcode01_01_KinematicParticle.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Simulator.cpp main.cpp
+         Simulator.cpp
+         Generating Code...
+         Compiling...
+         main.cpp
+     1>c:\ymkang_work\lecture\201501lec_gamephysics\gpcode01_01_kinematicparticle\gpcode01_01_kinematicparticle\main.cpp(39): warning C4305: 'argument' : truncation from 'double' to 'GLclampf'
+     1>c:\ymkang_work\lecture\201501lec_gamephysics\gpcode01_01_kinematicparticle\gpcode01_01_kinematicparticle\main.cpp(75): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\ymkang_work\lecture\201501lec_gamephysics\gpcode01_01_kinematicparticle\gpcode01_01_kinematicparticle\main.cpp(109): warning C4305: 'argument' : truncation from 'double' to 'float'
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\YMKang_Work\lecture\201501Lec_GamePhysics\GPcode01_01_KinematicParticle\Debug\GPcode01_01_KinematicParticle.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\YMKang_Work\lecture\201501Lec_GamePhysics\GPcode01_01_KinematicParticle\Debug\GPcode01_01_KinematicParticle.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\YMKang_Work\lecture\201501Lec_GamePhysics\GPcode01_01_KinematicParticle\Debug\GPcode01_01_KinematicParticle.lib" /MACHINE:X86 Debug\main.obj
+         Debug\Particle.obj
+         Debug\Simulator.obj
+         Debug\StopWatch.obj
+         GPcode01_01_KinematicParticle.vcxproj -> C:\YMKang_Work\lecture\201501Lec_GamePhysics\GPcode01_01_KinematicParticle\Debug\GPcode01_01_KinematicParticle.exe
+     1>Done Building Project "C:\YMKang_Work\lecture\201501Lec_GamePhysics\GPcode01_01_KinematicParticle\GPcode01_01_KinematicParticle\GPcode01_01_KinematicParticle.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.70
