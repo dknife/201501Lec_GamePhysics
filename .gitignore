@@ -5,6 +5,7 @@
 
 # VC project related files
 *.suo
+*.sdf
 *.idb
 *.tlog
 *.log
