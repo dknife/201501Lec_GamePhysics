@@ -4,8 +4,9 @@
 *.pptx
 
 # VC project related files
-*.suo
+*.sln
 *.sdf
+*.suo
 *.idb
 *.tlog
 *.log
@@ -14,8 +15,6 @@
 *.lastbuildstate
 *.ilk
 *.pdb
-*.sdf
-*.sln
 *.manifest
 *.res
 *.cache
