@@ -12,6 +12,16 @@
 *.vcxproj
 *.vcxproj.filters
 *.lastbuildstate
+*.ilk
+*.pdb
+*.sdf
+*.sln
+*.manifest
+*.res
+*.cache
+*.rc
+*.user
+*.ipch
 
 # Compiled Object files
 *.slo
