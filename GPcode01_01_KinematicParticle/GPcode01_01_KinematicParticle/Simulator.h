@@ -4,12 +4,16 @@
 class CSimulator {
 
 public:
-	CSimulator() {};
+	// Constructor
+	CSimulator();
 
+	// initialization
 	void init(void);
-	void ActionsBeforeFrame(double dt, double elapsedTime);
-	void Actions(double dt, double elapsedTime);
-	void ActionsAfterFrame(double dt, double elapsedTime);
+
+	// actions to be preformed at every frame
+	void actionsBeforeFrame(double dt, double currentTime);
+	void actions(double dt, double currentTime);
+	void actionsAfterFrame(double dt, double currentTime);
 	
 	// Control Event Handlers
 	void stop();
