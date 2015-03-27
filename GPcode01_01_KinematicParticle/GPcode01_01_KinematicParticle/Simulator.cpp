@@ -1,25 +1,18 @@
 #include "Simulator.h"
-
+#include <stdlib.h>include
 // Constructor
-CSimulator::CSimulator(){ }
+CSimulator::CSimulator(){  }
 
-// initialization
-void CSimulator::init(void) {}
+CSimulator::~CSimulator() { }
 
-// Actions to be performed at every frame
-void CSimulator::actionsBeforeFrame(double dt, double currentTime) {
-
-}
 
 void CSimulator::actions(double dt, double currentTime) {
-	actionsBeforeFrame(dt, currentTime);
-
-	actionsAfterFrame(dt, currentTime);
+	doBeforeSimulation(dt, currentTime);
+    doSimulation(dt, currentTime);
+	doAfterSimulation(dt, currentTime);
 }
 
-void CSimulator::actionsAfterFrame(double dt, double currentTime) {
 
-}
 
 // Control Event Handlers
 void CSimulator::stop() {

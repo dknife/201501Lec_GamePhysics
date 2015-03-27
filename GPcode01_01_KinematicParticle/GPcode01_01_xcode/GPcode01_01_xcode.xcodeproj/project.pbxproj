@@ -13,6 +13,8 @@
 		6D4922C81AC58B9300101C68 /* StopWatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D4922C31AC58B9300101C68 /* StopWatch.cpp */; };
 		6D4922CB1AC58BA000101C68 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D4922C91AC58BA000101C68 /* GLUT.framework */; };
 		6D4922CC1AC58BA000101C68 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D4922CA1AC58BA000101C68 /* OpenGL.framework */; };
+		6D4922CF1AC5A32200101C68 /* KinematicsSimulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D4922CD1AC5A32200101C68 /* KinematicsSimulator.cpp */; };
+		6D4922D21AC5A8FE00101C68 /* Vec3f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D4922D01AC5A8FE00101C68 /* Vec3f.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +40,10 @@
 		6D4922C41AC58B9300101C68 /* StopWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StopWatch.h; path = ../../GPcode01_01_KinematicParticle/StopWatch.h; sourceTree = "<group>"; };
 		6D4922C91AC58BA000101C68 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		6D4922CA1AC58BA000101C68 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		6D4922CD1AC5A32200101C68 /* KinematicsSimulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = KinematicsSimulator.cpp; path = ../../GPcode01_01_KinematicParticle/KinematicsSimulator.cpp; sourceTree = "<group>"; };
+		6D4922CE1AC5A32200101C68 /* KinematicsSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KinematicsSimulator.h; path = ../../GPcode01_01_KinematicParticle/KinematicsSimulator.h; sourceTree = "<group>"; };
+		6D4922D01AC5A8FE00101C68 /* Vec3f.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vec3f.cpp; path = ../../GPcode01_01_KinematicParticle/Vec3f.cpp; sourceTree = "<group>"; };
+		6D4922D11AC5A8FE00101C68 /* Vec3f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vec3f.h; path = ../../GPcode01_01_KinematicParticle/Vec3f.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,10 @@
 				6D4922C21AC58B9300101C68 /* Simulator.h */,
 				6D4922C31AC58B9300101C68 /* StopWatch.cpp */,
 				6D4922C41AC58B9300101C68 /* StopWatch.h */,
+				6D4922CD1AC5A32200101C68 /* KinematicsSimulator.cpp */,
+				6D4922CE1AC5A32200101C68 /* KinematicsSimulator.h */,
+				6D4922D01AC5A8FE00101C68 /* Vec3f.cpp */,
+				6D4922D11AC5A8FE00101C68 /* Vec3f.h */,
 			);
 			path = GPcode01_01_xcode;
 			sourceTree = "<group>";
@@ -144,7 +154,9 @@
 				6D4922C51AC58B9300101C68 /* main.cpp in Sources */,
 				6D4922C61AC58B9300101C68 /* Particle.cpp in Sources */,
 				6D4922C71AC58B9300101C68 /* Simulator.cpp in Sources */,
+				6D4922CF1AC5A32200101C68 /* KinematicsSimulator.cpp in Sources */,
 				6D4922C81AC58B9300101C68 /* StopWatch.cpp in Sources */,
+				6D4922D21AC5A8FE00101C68 /* Vec3f.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

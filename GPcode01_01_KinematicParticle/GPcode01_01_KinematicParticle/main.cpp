@@ -17,10 +17,11 @@
 #include <stdlib.h>
 #include <math.h>
 #include "StopWatch.h"
-#include "Simulator.h"
+#include "KinematicsSimulator.h"
 
 CStopWatch myWatch;
-CSimulator mySimulator;
+CKinematicSimulator mySimulator;
+CSimulator* Simulator = (CSimulator *) &mySimulator;
 
 bool bRunning = false;
 double deltaTime = 0.0; // unit: second
@@ -72,6 +73,7 @@ void drawAxes(void) {
 
 void Init(void) {
 	glClearColor(0, 0.5, 0.5, 0);
+    Simulator->init();
 
 }
 
@@ -113,7 +115,7 @@ void displayFunction(void) {
 	myWatch.stop();
 	deltaTime = myWatch.getElapsedTime() / 1000000.0;
 	currentTime += deltaTime;
-	mySimulator.actions(deltaTime, currentTime);
+	Simulator->actions(deltaTime, currentTime);
 	myWatch.start();
 
 

@@ -1,5 +1,8 @@
 #include "StopWatch.h"
 
+////
+// Constructor
+////
 CStopWatch::CStopWatch() {
 #ifdef WIN32
 	QueryPerformanceFrequency(&frequency);
@@ -12,6 +15,9 @@ CStopWatch::CStopWatch() {
 	startTimeInMicroSec = endTimeInMicroSec = 0.0;
 }
 
+////
+// StopWatch starts and records the time
+////
 void CStopWatch::start() {
 #ifdef WIN32
 	QueryPerformanceCounter(&startCount);
@@ -20,6 +26,9 @@ void CStopWatch::start() {
 #endif
 }
 
+////
+// StopWatch stops and records the time
+////
 void CStopWatch::stop() {
 #ifdef WIN32
 	QueryPerformanceCounter(&endCount);
@@ -28,6 +37,9 @@ void CStopWatch::stop() {
 #endif
 }
 
+////
+// StopWatch computes the time (in microseconds) between the last "start" and "stop"
+////
 double CStopWatch::getElapsedTime(){
 #ifdef WIN32
 	startTimeInMicroSec = startCount.QuadPart * (1000000.0 / frequency.QuadPart);
