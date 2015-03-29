@@ -33,17 +33,17 @@
 		6D4922B41AC58B6300101C68 /* GPcode01_01_xcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GPcode01_01_xcode; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D4922C91AC58BA000101C68 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		6D4922CA1AC58BA000101C68 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		F74F0CBF1AC78D8800E87CCF /* KinematicsSimulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = KinematicsSimulator.cpp; path = ../../GPcode01_01_KinematicParticle/KinematicsSimulator.cpp; sourceTree = "<group>"; };
-		F74F0CC01AC78D8800E87CCF /* KinematicsSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KinematicsSimulator.h; path = ../../GPcode01_01_KinematicParticle/KinematicsSimulator.h; sourceTree = "<group>"; };
-		F74F0CC11AC78D8800E87CCF /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../GPcode01_01_KinematicParticle/main.cpp; sourceTree = "<group>"; };
-		F74F0CC21AC78D8800E87CCF /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Particle.cpp; path = ../../GPcode01_01_KinematicParticle/Particle.cpp; sourceTree = "<group>"; };
-		F74F0CC31AC78D8800E87CCF /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Particle.h; path = ../../GPcode01_01_KinematicParticle/Particle.h; sourceTree = "<group>"; };
-		F74F0CC41AC78D8800E87CCF /* Simulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Simulator.cpp; path = ../../GPcode01_01_KinematicParticle/Simulator.cpp; sourceTree = "<group>"; };
-		F74F0CC51AC78D8800E87CCF /* Simulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Simulator.h; path = ../../GPcode01_01_KinematicParticle/Simulator.h; sourceTree = "<group>"; };
-		F74F0CC61AC78D8800E87CCF /* StopWatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StopWatch.cpp; path = ../../GPcode01_01_KinematicParticle/StopWatch.cpp; sourceTree = "<group>"; };
-		F74F0CC71AC78D8800E87CCF /* StopWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StopWatch.h; path = ../../GPcode01_01_KinematicParticle/StopWatch.h; sourceTree = "<group>"; };
-		F74F0CC81AC78D8800E87CCF /* Vec3f.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vec3f.cpp; path = ../../GPcode01_01_KinematicParticle/Vec3f.cpp; sourceTree = "<group>"; };
-		F74F0CC91AC78D8800E87CCF /* Vec3f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vec3f.h; path = ../../GPcode01_01_KinematicParticle/Vec3f.h; sourceTree = "<group>"; };
+		F74F0CBF1AC78D8800E87CCF /* KinematicsSimulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KinematicsSimulator.cpp; sourceTree = "<group>"; };
+		F74F0CC01AC78D8800E87CCF /* KinematicsSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KinematicsSimulator.h; sourceTree = "<group>"; };
+		F74F0CC11AC78D8800E87CCF /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F74F0CC21AC78D8800E87CCF /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Particle.cpp; sourceTree = "<group>"; };
+		F74F0CC31AC78D8800E87CCF /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Particle.h; sourceTree = "<group>"; };
+		F74F0CC41AC78D8800E87CCF /* Simulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Simulator.cpp; sourceTree = "<group>"; };
+		F74F0CC51AC78D8800E87CCF /* Simulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Simulator.h; sourceTree = "<group>"; };
+		F74F0CC61AC78D8800E87CCF /* StopWatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StopWatch.cpp; sourceTree = "<group>"; };
+		F74F0CC71AC78D8800E87CCF /* StopWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopWatch.h; sourceTree = "<group>"; };
+		F74F0CC81AC78D8800E87CCF /* Vec3f.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vec3f.cpp; sourceTree = "<group>"; };
+		F74F0CC91AC78D8800E87CCF /* Vec3f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vec3f.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +92,9 @@
 				F74F0CC81AC78D8800E87CCF /* Vec3f.cpp */,
 				F74F0CC91AC78D8800E87CCF /* Vec3f.h */,
 			);
-			path = GPcode01_01_xcode;
-			sourceTree = "<group>";
+			name = GPcode01_01_xcode;
+			path = ../GPcode01_01_KinematicParticle;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
