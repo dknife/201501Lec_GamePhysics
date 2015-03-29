@@ -1,5 +1,6 @@
 #include "Simulator.h"
-#include <stdlib.h>include
+#include <stdlib.h>
+
 // Constructor
 CSimulator::CSimulator(){  }
 
