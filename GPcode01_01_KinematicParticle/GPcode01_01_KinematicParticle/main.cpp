@@ -29,7 +29,7 @@ double currentTime = 0.0; // unit: second
 
 
 
-void setupOpenGL(int *argcPtr, char **argv, char *title, int sizeX, int sizeY) {
+void setupOpenGL(int *argcPtr, char *argv[], char title[], int sizeX, int sizeY) {
 	glutInit(argcPtr, argv);
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
 	glutInitWindowPosition(100, 100);
