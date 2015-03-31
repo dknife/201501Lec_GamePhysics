@@ -12,7 +12,7 @@
 #include "Particle.h"
 class CKinematicSimulator : public CSimulator {
     CParticle particle;
-    CVec3f pos;
+    CVec3d pos;
     
 public:
     CKinematicSimulator();

@@ -14,7 +14,7 @@
 		F74F0CCC1AC78D8800E87CCF /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F74F0CC21AC78D8800E87CCF /* Particle.cpp */; };
 		F74F0CCD1AC78D8800E87CCF /* Simulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F74F0CC41AC78D8800E87CCF /* Simulator.cpp */; };
 		F74F0CCE1AC78D8800E87CCF /* StopWatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F74F0CC61AC78D8800E87CCF /* StopWatch.cpp */; };
-		F74F0CCF1AC78D8800E87CCF /* Vec3f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F74F0CC81AC78D8800E87CCF /* Vec3f.cpp */; };
+		F74F0CCF1AC78D8800E87CCF /* Vec3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F74F0CC81AC78D8800E87CCF /* Vec3d.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,8 +42,8 @@
 		F74F0CC51AC78D8800E87CCF /* Simulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Simulator.h; sourceTree = "<group>"; };
 		F74F0CC61AC78D8800E87CCF /* StopWatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StopWatch.cpp; sourceTree = "<group>"; };
 		F74F0CC71AC78D8800E87CCF /* StopWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopWatch.h; sourceTree = "<group>"; };
-		F74F0CC81AC78D8800E87CCF /* Vec3f.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vec3f.cpp; sourceTree = "<group>"; };
-		F74F0CC91AC78D8800E87CCF /* Vec3f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vec3f.h; sourceTree = "<group>"; };
+		F74F0CC81AC78D8800E87CCF /* Vec3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vec3d.cpp; sourceTree = "<group>"; };
+		F74F0CC91AC78D8800E87CCF /* Vec3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vec3d.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,17 +80,17 @@
 		6D4922B61AC58B6300101C68 /* GPcode01_01_xcode */ = {
 			isa = PBXGroup;
 			children = (
-				F74F0CBF1AC78D8800E87CCF /* KinematicsSimulator.cpp */,
 				F74F0CC01AC78D8800E87CCF /* KinematicsSimulator.h */,
+				F74F0CBF1AC78D8800E87CCF /* KinematicsSimulator.cpp */,
 				F74F0CC11AC78D8800E87CCF /* main.cpp */,
-				F74F0CC21AC78D8800E87CCF /* Particle.cpp */,
 				F74F0CC31AC78D8800E87CCF /* Particle.h */,
-				F74F0CC41AC78D8800E87CCF /* Simulator.cpp */,
+				F74F0CC21AC78D8800E87CCF /* Particle.cpp */,
 				F74F0CC51AC78D8800E87CCF /* Simulator.h */,
-				F74F0CC61AC78D8800E87CCF /* StopWatch.cpp */,
+				F74F0CC41AC78D8800E87CCF /* Simulator.cpp */,
 				F74F0CC71AC78D8800E87CCF /* StopWatch.h */,
-				F74F0CC81AC78D8800E87CCF /* Vec3f.cpp */,
-				F74F0CC91AC78D8800E87CCF /* Vec3f.h */,
+				F74F0CC61AC78D8800E87CCF /* StopWatch.cpp */,
+				F74F0CC91AC78D8800E87CCF /* Vec3d.h */,
+				F74F0CC81AC78D8800E87CCF /* Vec3d.cpp */,
 			);
 			name = GPcode01_01_xcode;
 			path = ../GPcode01_01_KinematicParticle;
@@ -157,7 +157,7 @@
 				F74F0CCC1AC78D8800E87CCF /* Particle.cpp in Sources */,
 				F74F0CCD1AC78D8800E87CCF /* Simulator.cpp in Sources */,
 				F74F0CCA1AC78D8800E87CCF /* KinematicsSimulator.cpp in Sources */,
-				F74F0CCF1AC78D8800E87CCF /* Vec3f.cpp in Sources */,
+				F74F0CCF1AC78D8800E87CCF /* Vec3d.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,10 +197,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.9;
 			};
 			name = Debug;
 		};
@@ -232,9 +232,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.9;
 			};
 			name = Release;
 		};

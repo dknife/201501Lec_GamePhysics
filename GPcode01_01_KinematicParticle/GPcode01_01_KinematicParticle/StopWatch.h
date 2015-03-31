@@ -14,22 +14,43 @@
 #include <sys/time.h>
 #endif
 
-class CStopWatch {
 #ifdef WIN32
-	LARGE_INTEGER frequency;
-	LARGE_INTEGER startCount;
-	LARGE_INTEGER endCount;
+typedef LARGE_INTEGER _timeCountType;
 #else
-	timeval startCount;
-	timeval endCount;
+typedef timeval _timeCountType;
 #endif
-	double startTimeInMicroSec;
-	double endTimeInMicroSec;
+
+class CStopWatch {
+    bool bStarted;
+    bool bPaused;
+    
+#ifdef WIN32
+	_timeCountType frequency; // ticks per seconds (required only on Windows)
+#endif
+	_timeCountType startCount;
+	_timeCountType endCount;
+    _timeCountType checkCount;
+    _timeCountType tempCount;
+    _timeCountType pauseStart;
+    _timeCountType pauseEnd;
+    
+    void    getCurrentTime(_timeCountType* timeData);
+    double  diffTimeInMicroSec(_timeCountType timePre, _timeCountType timeNext);
+    void    addMicroSeconds(_timeCountType* orgTime, double timeToBeAddedInMicroSec);
+    
+    void initTime();
+    
+    // public methods
 public:
 	CStopWatch();
-	void start();       // start StopWatch and record time to "startCount"
-	void stop();        // stop StopWatch and record time to "endCount"
-	double getElapsedTime();// return the elapsed time at the last stop since the last start (microsec)
+	void start();       // start StopWatch
+    void stop();        // stops StopWatch
+    void pause();
+    void resume();
+    
+    // time checking
+    double checkAndComputeDT();     // check time and returns the "delta time" since the previous time check (in microsec)
+	double getTotalElapsedTime();   // return the total elapsed time since the StopWatch started (in microsec)
 };
 
 #endif

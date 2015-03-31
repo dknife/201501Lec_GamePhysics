@@ -18,6 +18,7 @@
 #include <math.h>
 #include "StopWatch.h"
 #include "KinematicsSimulator.h"
+#include "Vec3d.h"
 
 CStopWatch myWatch;
 CKinematicSimulator mySimulator;
@@ -35,10 +36,7 @@ void setupOpenGL(int *argcPtr, char *argv[], char title[], int sizeX, int sizeY)
 	glutInitWindowPosition(100, 100);
 	glutInitWindowSize(sizeX, sizeY);
 	glutCreateWindow(title);
-
-
 	glEnable(GL_DEPTH_TEST);
-	glClearColor(0.8, 0.8, 1.0, 1.0);
 }
 
 
@@ -51,9 +49,29 @@ void setupCamera(
 }
 
 
+void drawPlane(double wx, double wz, int nStepX, int nStepZ) {
+    CVec3d startVert(-wx/2.0, 0.0, -wz/2.0);
+    double stepZ = wz/nStepZ;
+    double stepX = wx/nStepX;
+    
+    glColor3f(0.5, 0.5, 0.5);
+    glBegin(GL_LINES);
+    for(int i=0;i<nStepZ+1; i++) {
+        glVertex3d( startVert.x,      startVert.y, startVert.z + stepZ*i);
+        glVertex3d( startVert.x + wx, startVert.y, startVert.z + stepZ*i);
+    }
+    for(int i=0;i<nStepX+1; i++) {
+        glVertex3d( startVert.x + stepX*i, startVert.y, startVert.z);
+        glVertex3d( startVert.x + stepX*i, startVert.y, startVert.z + wz);
+    }
+    glEnd();
+    glColor3f(1.0, 1.0, 1.0);
+    
+}
 
 
 void drawAxes(void) {
+
 	GLfloat cData[] = {
 		1.0, 0.0, 0.0, 1.0, 0.0, 0.0,
 		0.0, 1.0, 0.0, 0.0, 1.0, 0.0,
@@ -72,7 +90,7 @@ void drawAxes(void) {
 
 
 void Init(void) {
-	glClearColor(0, 0.5, 0.5, 0);
+	glClearColor(0.75, 0.75, 0.75, 0);
     Simulator->init();
 
 }
@@ -103,21 +121,18 @@ void idleFunction(void) {
 
 void displayFunction(void) {
 
-	if(!bRunning) {
-		myWatch.start(); bRunning = true;
-	}
+	if(!bRunning) {	myWatch.start(); bRunning = true; }
 
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	setupCamera(1, 2, 2, 0, 0, 0, 0, 1, 0);
 
-	drawAxes();
-
-	myWatch.stop();
-	deltaTime = myWatch.getElapsedTime() / 1000000.0;
-	currentTime += deltaTime;
+    drawPlane(2.0, 2.0, 20, 20);
+    glLineWidth(3); drawAxes(); glLineWidth(1);
+    
+    // check DT (in microsecond) from StopWatch and store it to "deltaTime" (in seconds)
+	deltaTime = myWatch.checkAndComputeDT() / 1000000.0;
+    currentTime = myWatch.getTotalElapsedTime() / 1000000.0;
 	Simulator->actions(deltaTime, currentTime);
-	myWatch.start();
-
 
 	glutSwapBuffers();
 }

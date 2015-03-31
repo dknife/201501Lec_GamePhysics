@@ -1,13 +1,13 @@
 //
-//  Vec3f.h
+//  Vec3d.h
 //  GPcode01_01_xcode
 //
 //  Created by young-min kang on 3/28/15.
 //  Copyright (c) 2015 young-min kang. All rights reserved.
 //
 
-#ifndef __GPcode01_01_xcode__Vec3f__
-#define __GPcode01_01_xcode__Vec3f__
+#ifndef __GPcode01_01_xcode__Vec3d__
+#define __GPcode01_01_xcode__Vec3d__
 
 #include <stdio.h>
 
@@ -21,50 +21,51 @@
  - vector operations: + (add) , - (sub), * (cross), ^ (dot)
  - Copyright(c) Young-Min Kang */
 
-class CVec3f {
+class CVec3d {
+public:
     /*! vector elements */
-    float x,y,z;
+    double x,y,z;
     
 public:
     
     //! Constructors
-    CVec3f();
-    CVec3f(float a, float b, float c);
+    CVec3d();
+    CVec3d(double a, double b, double c);
     //! Copy Constructor
-    CVec3f(CVec3f &v);
+    CVec3d(CVec3d &v);
     
     
     //! Set Elements
-    void set(float a, float b, float c);
+    void set(double a, double b, double c);
     
     //! Get Elements
-    void get(float &a, float &b, float &c);
+    void get(double &a, double &b, double &c);
     
     //! Bracket Operators for indexing the vector elements
-    float operator[](int idx) const;
+    double operator[](int idx) const;
     
     //! Vector Addition
     /*! vectorA + vectorB returns the addition result*/
-    CVec3f& operator+(const CVec3f& v) const;
+    CVec3d& operator+(const CVec3d& v) const;
     
     //! Vector Subtraction
     /*! vectorA - vectorB returns the subtraction result*/
-    CVec3f& operator-(const CVec3f& v) const;
+    CVec3d& operator-(const CVec3d& v) const;
     
     //! Scalar multiplication
     /*! vectorA * scalar returns a scaled vector*/
-    CVec3f& operator *(const float& s) const;
+    CVec3d& operator *(const double& s) const;
     
     //! Vector Cross Product
     /*! vectorA * vectorB returns the cross product of the vectors */
-    CVec3f& operator*(const CVec3f& v) const; // cross product
+    CVec3d& operator*(const CVec3d& v) const; // cross product
     
     //! Vector Dot Product
     /*! vectorA ^ vectorB returns the dot product of the vectors */
-    float operator^(const CVec3f& v) const; // dot product
+    double operator^(const CVec3d& v) const; // dot product
     
     //! Vector Length
-    float	len(void);
+    double	len(void);
     
     //! Vector Normalization
     /*! The vector itself is normalized, and there is no return values */
@@ -72,24 +73,24 @@ public:
     
     //! Returns the normalized version of the vector
     /*! The vector itself is not normalized, and the length is preserved */
-    CVec3f&	getNormalized(void);
+    CVec3d&	getNormalized(void);
     
     
     // Friend Functions
     
     /*! cross [friend function]: cross product of the given two vectors
      - usage: crossResult = cross(vector1, vector2) */
-    friend CVec3f& cross(const CVec3f& v1, const CVec3f& v2);
+    friend CVec3d& cross(const CVec3d& v1, const CVec3d& v2);
     
     /*! dot [friend function]: dot product of the given two vectors
      - usage: dotResult = dot(vector1, vector2) */
-    friend float dot(const CVec3f& v1, const CVec3f v2);
+    friend double dot(const CVec3d& v1, const CVec3d v2);
     
     /*! * [friend operator]: scales a vector 
      - usage: scaledVector = scalar * originalVector */
-    friend CVec3f& operator*(float scalar, const CVec3f& v);
+    friend CVec3d& operator*(double scalar, const CVec3d& v);
     
     
 };
 
-#endif /* defined(__GPcode01_01_xcode__Vec3f__) */
+#endif /* defined(__GPcode01_01_xcode__Vec3d__) */
