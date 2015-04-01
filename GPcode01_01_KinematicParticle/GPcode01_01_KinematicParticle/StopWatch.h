@@ -34,9 +34,9 @@ class CStopWatch {
     _timeCountType pauseStart;
     _timeCountType pauseEnd;
     
-    void    getCurrentTime(_timeCountType* timeData);
-    double  diffTimeInMicroSec(_timeCountType timePre, _timeCountType timeNext);
-    void    addMicroSeconds(_timeCountType* orgTime, double timeToBeAddedInMicroSec);
+    void    getCurrentTime(    _timeCountType* timeData);
+    double  diffTimeInMicroSec(_timeCountType  timePre, _timeCountType timeNext);
+    void    addMicroSeconds(   _timeCountType* orgTime, double timeToBeAddedInMicroSec);
     
     void initTime();
     
