@@ -45,7 +45,7 @@ void CStopWatch::addMicroSeconds(_timeCountType* orgTime, double timeToBeAddedIn
     double addSec = timeToBeAddedInMicroSec / 1000000;
     double addMicro = timeToBeAddedInMicroSec - addSec * 1000000;
 #ifdef WIN32
-    orgTime += timeToBeAddedInMicroSec * frequency.QuadPart / 1000000;
+	orgTime->QuadPart += timeToBeAddedInMicroSec * frequency.QuadPart / 1000000;
 #else
     orgTime->tv_sec += addSec;
     orgTime->tv_usec += addMicro;
