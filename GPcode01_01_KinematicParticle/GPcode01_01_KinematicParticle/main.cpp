@@ -113,6 +113,19 @@ void reshapeFunction(int w, int h) {
 
 void keyboardFunction(unsigned char key, int x, int y) {
 	if (key == 27) exit(0);
+    switch (key) {
+        case 's':
+            if(!myWatch.bRunning()) myWatch.start();
+            else myWatch.stop();
+            break;
+        case 'p':
+            myWatch.pause();
+            break;
+        case 'r':
+            myWatch.resume();
+        default:
+            break;
+    }
 }
 
 void idleFunction(void) {
@@ -121,7 +134,6 @@ void idleFunction(void) {
 
 void displayFunction(void) {
 
-	if(!bRunning) {	myWatch.start(); bRunning = true; }
 
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	setupCamera(1, 2, 2, 0, 0, 0, 0, 1, 0);

@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "StopWatch.h"
 
 ////
@@ -42,8 +43,8 @@ double CStopWatch::diffTimeInMicroSec(_timeCountType timePre, _timeCountType tim
 }
 
 void CStopWatch::addMicroSeconds(_timeCountType* orgTime, double timeToBeAddedInMicroSec) {
-    double addSec = timeToBeAddedInMicroSec / 1000000;
-    double addMicro = timeToBeAddedInMicroSec - addSec * 1000000;
+    long addSec = (long) timeToBeAddedInMicroSec / 1000000;
+    long addMicro = (long) timeToBeAddedInMicroSec - addSec * 1000000;
 #ifdef WIN32
 	orgTime->QuadPart += timeToBeAddedInMicroSec * frequency.QuadPart / 1000000;
 #else
@@ -61,9 +62,12 @@ void CStopWatch::addMicroSeconds(_timeCountType* orgTime, double timeToBeAddedIn
 void CStopWatch::start() {
     if(bStarted) return;
     else bStarted = true;
+
+    initTime();
     
     getCurrentTime(&startCount);
     checkCount = startCount;
+    endCount = startCount;
 }
 
 ////
@@ -72,13 +76,15 @@ void CStopWatch::start() {
 void CStopWatch::stop() {
     if(!bStarted) return;
     else bStarted = false;
+    if(bPaused) { resume(); }
     
-    initTime();
+    getCurrentTime(&endCount);
+
 }
 
 // Pause Watch
 void CStopWatch::pause() {
-    if(bPaused) return;
+    if(!bStarted || bPaused) return;
     else bPaused = true;
     
     getCurrentTime(&pauseStart);
@@ -106,7 +112,7 @@ double CStopWatch::checkAndComputeDT() {
 // StopWatch computes the time (in microseconds) between the last "start" and "stop"
 ////
 double CStopWatch::getTotalElapsedTime(){
-    if (!bStarted)  return 0.0;
+    if (!bStarted)  return diffTimeInMicroSec(startCount, endCount);
     if (bPaused) {
         endCount = pauseStart;
     }

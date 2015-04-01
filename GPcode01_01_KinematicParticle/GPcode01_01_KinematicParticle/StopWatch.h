@@ -43,14 +43,15 @@ class CStopWatch {
     // public methods
 public:
 	CStopWatch();
-	void start();       // start StopWatch
-    void stop();        // stops StopWatch
-    void pause();
-    void resume();
+	void start();       // start  StopWatch : watch start at time=0
+    void stop();        // stops  StopWatch : watch stops and holds the end-time
+    void pause();       // pauses StopWatch : time does not pass when the watch paused
+    void resume();      // resume StopWatch : resume time to pass again from the paused moment
+    bool bRunning() { return bStarted; }
     
-    // time checking
-    double checkAndComputeDT();     // check time and returns the "delta time" since the previous time check (in microsec)
-	double getTotalElapsedTime();   // return the total elapsed time since the StopWatch started (in microsec)
+    // time checking ( in microseconds)
+    double checkAndComputeDT();     // check time and returns the "delta time" since the previous time check
+	double getTotalElapsedTime();   // return the total elapsed time since the StopWatch started
 };
 
 #endif
