@@ -28,6 +28,7 @@ void CKinematicSimulator::doSimulation(double dt, double currentTime) {
     currentLoc = initialLoc 
 		+ currentTime*initialVel 
 		+ (0.5 * currentTime * currentTime)  * gravity ;
+	
     particle.setPosition(currentLoc[0], currentLoc[1], currentLoc[2]);
     particle.drawWithGL();
 }
