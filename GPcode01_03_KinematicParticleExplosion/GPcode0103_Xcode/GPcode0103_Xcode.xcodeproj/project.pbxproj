@@ -31,17 +31,17 @@
 
 /* Begin PBXFileReference section */
 		F7FB8D361AD00B640020F2B0 /* GPcode0103_Xcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GPcode0103_Xcode; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7FB8F101AD00C850020F2B0 /* KinematicsSimulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = KinematicsSimulator.cpp; path = ../../GPcode01_03_KinematicParticleExplosion/KinematicsSimulator.cpp; sourceTree = "<group>"; };
-		F7FB8F111AD00C850020F2B0 /* KinematicsSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KinematicsSimulator.h; path = ../../GPcode01_03_KinematicParticleExplosion/KinematicsSimulator.h; sourceTree = "<group>"; };
-		F7FB8F121AD00C850020F2B0 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../GPcode01_03_KinematicParticleExplosion/main.cpp; sourceTree = "<group>"; };
-		F7FB8F131AD00C850020F2B0 /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Particle.cpp; path = ../../GPcode01_03_KinematicParticleExplosion/Particle.cpp; sourceTree = "<group>"; };
-		F7FB8F141AD00C850020F2B0 /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Particle.h; path = ../../GPcode01_03_KinematicParticleExplosion/Particle.h; sourceTree = "<group>"; };
-		F7FB8F151AD00C850020F2B0 /* Simulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Simulator.cpp; path = ../../GPcode01_03_KinematicParticleExplosion/Simulator.cpp; sourceTree = "<group>"; };
-		F7FB8F161AD00C850020F2B0 /* Simulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Simulator.h; path = ../../GPcode01_03_KinematicParticleExplosion/Simulator.h; sourceTree = "<group>"; };
-		F7FB8F171AD00C850020F2B0 /* StopWatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StopWatch.cpp; path = ../../GPcode01_03_KinematicParticleExplosion/StopWatch.cpp; sourceTree = "<group>"; };
-		F7FB8F181AD00C850020F2B0 /* StopWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StopWatch.h; path = ../../GPcode01_03_KinematicParticleExplosion/StopWatch.h; sourceTree = "<group>"; };
-		F7FB8F191AD00C850020F2B0 /* Vec3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vec3d.cpp; path = ../../GPcode01_03_KinematicParticleExplosion/Vec3d.cpp; sourceTree = "<group>"; };
-		F7FB8F1A1AD00C850020F2B0 /* Vec3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vec3d.h; path = ../../GPcode01_03_KinematicParticleExplosion/Vec3d.h; sourceTree = "<group>"; };
+		F7FB8F101AD00C850020F2B0 /* KinematicsSimulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KinematicsSimulator.cpp; sourceTree = "<group>"; };
+		F7FB8F111AD00C850020F2B0 /* KinematicsSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KinematicsSimulator.h; sourceTree = "<group>"; };
+		F7FB8F121AD00C850020F2B0 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F7FB8F131AD00C850020F2B0 /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Particle.cpp; sourceTree = "<group>"; };
+		F7FB8F141AD00C850020F2B0 /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Particle.h; sourceTree = "<group>"; };
+		F7FB8F151AD00C850020F2B0 /* Simulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Simulator.cpp; sourceTree = "<group>"; };
+		F7FB8F161AD00C850020F2B0 /* Simulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Simulator.h; sourceTree = "<group>"; };
+		F7FB8F171AD00C850020F2B0 /* StopWatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StopWatch.cpp; sourceTree = "<group>"; };
+		F7FB8F181AD00C850020F2B0 /* StopWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopWatch.h; sourceTree = "<group>"; };
+		F7FB8F191AD00C850020F2B0 /* Vec3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vec3d.cpp; sourceTree = "<group>"; };
+		F7FB8F1A1AD00C850020F2B0 /* Vec3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vec3d.h; sourceTree = "<group>"; };
 		F7FB8F211AD00CA40020F2B0 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		F7FB8F221AD00CA40020F2B0 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -64,7 +64,7 @@
 			children = (
 				F7FB8F211AD00CA40020F2B0 /* GLUT.framework */,
 				F7FB8F221AD00CA40020F2B0 /* OpenGL.framework */,
-				F7FB8D381AD00B640020F2B0 /* GPcode0103_Xcode */,
+				F7FB8D381AD00B640020F2B0 /* Source */,
 				F7FB8D371AD00B640020F2B0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,7 +77,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F7FB8D381AD00B640020F2B0 /* GPcode0103_Xcode */ = {
+		F7FB8D381AD00B640020F2B0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				F7FB8F101AD00C850020F2B0 /* KinematicsSimulator.cpp */,
@@ -92,7 +92,8 @@
 				F7FB8F191AD00C850020F2B0 /* Vec3d.cpp */,
 				F7FB8F1A1AD00C850020F2B0 /* Vec3d.h */,
 			);
-			path = GPcode0103_Xcode;
+			name = Source;
+			path = ../GPcode01_03_KinematicParticleExplosion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +271,7 @@
 				F7FB8D3F1AD00B640020F2B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

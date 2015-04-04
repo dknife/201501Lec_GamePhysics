@@ -23,7 +23,7 @@ void CKinematicSimulator::doBeforeSimulation(double dt, double currentTime) {
 void CKinematicSimulator::doSimulation(double dt, double currentTime) {
     for(int i=0;i<NUMPARTS;i++){
         particle[i].simulate(dt, currentTime);
-        particle[i].drawWithGL();
+        particle[i].drawWithGL(POINT_DRAW);
     }
 }
 

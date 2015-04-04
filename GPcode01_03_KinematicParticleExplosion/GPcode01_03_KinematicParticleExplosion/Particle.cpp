@@ -15,13 +15,17 @@ void CParticle::setRadius(double r) {
     
 }
 
-void CParticle::drawWithGL(void) {
+void CParticle::drawWithGL(int drawMode) {
     glPushMatrix();
     glTranslated(center[0], center[1], center[2]);
-    glBegin(GL_POINTS);
-    glVertex3f(0,0,0);
-    glEnd();
-    //glutWireSphere(radius, 3, 3);
+    if (drawMode == SPHERE_DRAW) {
+        glutWireSphere(radius, 10, 10);
+    }
+    else {
+        glBegin(GL_POINTS);
+        glVertex3f(0,0,0);
+        glEnd();
+    }
     glPopMatrix();
 }
 
