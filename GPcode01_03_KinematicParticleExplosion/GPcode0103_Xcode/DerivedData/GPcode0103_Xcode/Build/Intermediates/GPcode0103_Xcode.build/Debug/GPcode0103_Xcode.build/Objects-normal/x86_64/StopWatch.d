@@ -1,0 +1,3 @@
+dependencies: \
+  /Users/mi-nyeonghwang/Desktop/ymkang/WorkAndDevelopment/201501Lec_GamePhysics/GPcode01_03_KinematicParticleExplosion/GPcode01_03_KinematicParticleExplosion/StopWatch.cpp \
+  /Users/mi-nyeonghwang/Desktop/ymkang/WorkAndDevelopment/201501Lec_GamePhysics/GPcode01_03_KinematicParticleExplosion/GPcode01_03_KinematicParticleExplosion/StopWatch.h

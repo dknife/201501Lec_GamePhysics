@@ -12,12 +12,8 @@ CKinematicSimulator::CKinematicSimulator() : CSimulator() {}
 
 
 void CKinematicSimulator::init() {
-	initialLoc.set(0,1,0);
-	initialVel.set(0,3,0);
-	gravity.set(0.0, -9.8, 0.0);
-	currentLoc = initialLoc;
-	particle.setPosition(currentLoc[0], currentLoc[1], currentLoc[2]);
-	particle.setRadius(0.1);
+
+    for(int i=0;i<NUMPARTS;i++)particle[i].randomInit();
 }
 
 void CKinematicSimulator::doBeforeSimulation(double dt, double currentTime) {
@@ -25,12 +21,10 @@ void CKinematicSimulator::doBeforeSimulation(double dt, double currentTime) {
 }
 
 void CKinematicSimulator::doSimulation(double dt, double currentTime) {
-    currentLoc = initialLoc 
-		+ currentTime*initialVel 
-		+ (0.5 * currentTime * currentTime)  * gravity ;
-	
-    particle.setPosition(currentLoc[0], currentLoc[1], currentLoc[2]);
-    particle.drawWithGL();
+    for(int i=0;i<NUMPARTS;i++){
+        particle[i].simulate(dt, currentTime);
+        particle[i].drawWithGL(SPHERE_DRAW);
+    }
 }
 
 

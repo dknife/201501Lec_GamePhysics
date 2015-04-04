@@ -10,12 +10,12 @@
 
 #include "Simulator.h"
 #include "Particle.h"
+
+#define NUMPARTS 1
+
 class CKinematicSimulator : public CSimulator {
-    CParticle particle;
-    CVec3d currentLoc;
-	CVec3d initialLoc;
-	CVec3d initialVel;
-	CVec3d gravity;
+    CParticle particle[NUMPARTS];
+
     
 public:
     CKinematicSimulator();

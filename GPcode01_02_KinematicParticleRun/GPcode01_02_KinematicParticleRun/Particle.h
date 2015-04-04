@@ -16,9 +16,18 @@
 
 #include "Vec3d.h"
 
+enum DrawMode {
+    POINT_DRAW,
+    SPHERE_DRAW
+};
 class CParticle {
     CVec3d center;
     float radius;
+    
+    CVec3d currentLoc;
+    CVec3d initialLoc;
+    CVec3d initialVel;
+    CVec3d gravity;
     
 public:
 	CParticle();
@@ -26,7 +35,9 @@ public:
 	void setPosition(double x, double y, double z);
 	void setRadius(double r);
 
-	void drawWithGL(void);
+    void randomInit(void);
+	void drawWithGL(int drawMode = SPHERE_DRAW);
+    void simulate(double dt, double eT);
 };
 
 #endif
