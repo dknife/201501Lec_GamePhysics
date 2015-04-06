@@ -1,4 +1,0 @@
-C:\Users\Lectures\ymkang\201501Lec_GamePhysics\ThisConstructor\ThisConstructor\bin\Debug\ThisConstructor.exe
-C:\Users\Lectures\ymkang\201501Lec_GamePhysics\ThisConstructor\ThisConstructor\bin\Debug\ThisConstructor.pdb
-C:\Users\Lectures\ymkang\201501Lec_GamePhysics\ThisConstructor\ThisConstructor\obj\x86\Debug\ThisConstructor.exe
-C:\Users\Lectures\ymkang\201501Lec_GamePhysics\ThisConstructor\ThisConstructor\obj\x86\Debug\ThisConstructor.pdb
