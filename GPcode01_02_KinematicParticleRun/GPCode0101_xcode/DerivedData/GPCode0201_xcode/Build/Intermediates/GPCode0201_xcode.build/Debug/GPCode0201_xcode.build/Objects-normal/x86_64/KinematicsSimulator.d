@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/mi-nyeonghwang/Desktop/ymkang/WorkAndDevelopment/201501Lec_GamePhysics/GPcode01_02_KinematicParticleRun/GPcode01_02_KinematicParticleRun/KinematicsSimulator.cpp \
-  /Users/mi-nyeonghwang/Desktop/ymkang/WorkAndDevelopment/201501Lec_GamePhysics/GPcode01_02_KinematicParticleRun/GPcode01_02_KinematicParticleRun/KinematicsSimulator.h \
-  /Users/mi-nyeonghwang/Desktop/ymkang/WorkAndDevelopment/201501Lec_GamePhysics/GPcode01_02_KinematicParticleRun/GPcode01_02_KinematicParticleRun/Simulator.h \
-  /Users/mi-nyeonghwang/Desktop/ymkang/WorkAndDevelopment/201501Lec_GamePhysics/GPcode01_02_KinematicParticleRun/GPcode01_02_KinematicParticleRun/Particle.h \
-  /Users/mi-nyeonghwang/Desktop/ymkang/WorkAndDevelopment/201501Lec_GamePhysics/GPcode01_02_KinematicParticleRun/GPcode01_02_KinematicParticleRun/Vec3d.h
+  /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode01_02_KinematicParticleRun/GPcode01_02_KinematicParticleRun/KinematicsSimulator.cpp \
+  /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode01_02_KinematicParticleRun/GPcode01_02_KinematicParticleRun/KinematicsSimulator.h \
+  /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode01_02_KinematicParticleRun/GPcode01_02_KinematicParticleRun/Simulator.h \
+  /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode01_02_KinematicParticleRun/GPcode01_02_KinematicParticleRun/Particle.h \
+  /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode01_02_KinematicParticleRun/GPcode01_02_KinematicParticleRun/Vec3d.h

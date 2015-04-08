@@ -1,0 +1,277 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6DB9CA251AD55CE1003AA996 /* DynamicSimulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DB9CA1A1AD55CE1003AA996 /* DynamicSimulator.cpp */; };
+		6DB9CA261AD55CE1003AA996 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DB9CA1C1AD55CE1003AA996 /* main.cpp */; };
+		6DB9CA271AD55CE1003AA996 /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DB9CA1D1AD55CE1003AA996 /* Particle.cpp */; };
+		6DB9CA281AD55CE1003AA996 /* Simulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DB9CA1F1AD55CE1003AA996 /* Simulator.cpp */; };
+		6DB9CA291AD55CE1003AA996 /* StopWatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DB9CA211AD55CE1003AA996 /* StopWatch.cpp */; };
+		6DB9CA2A1AD55CE1003AA996 /* Vec3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DB9CA231AD55CE1003AA996 /* Vec3d.cpp */; };
+		6DB9CA2D1AD55CF6003AA996 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB9CA2B1AD55CF6003AA996 /* GLUT.framework */; };
+		6DB9CA2E1AD55CF6003AA996 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB9CA2C1AD55CF6003AA996 /* OpenGL.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6DB9CA0E1AD55CC6003AA996 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6DB9CA101AD55CC6003AA996 /* GPcode0201_Xcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GPcode0201_Xcode; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DB9CA1A1AD55CE1003AA996 /* DynamicSimulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DynamicSimulator.cpp; path = ../../GPcode02_01_dynamics/DynamicSimulator.cpp; sourceTree = "<group>"; };
+		6DB9CA1B1AD55CE1003AA996 /* DynamicSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DynamicSimulator.h; path = ../../GPcode02_01_dynamics/DynamicSimulator.h; sourceTree = "<group>"; };
+		6DB9CA1C1AD55CE1003AA996 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../GPcode02_01_dynamics/main.cpp; sourceTree = "<group>"; };
+		6DB9CA1D1AD55CE1003AA996 /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Particle.cpp; path = ../../GPcode02_01_dynamics/Particle.cpp; sourceTree = "<group>"; };
+		6DB9CA1E1AD55CE1003AA996 /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Particle.h; path = ../../GPcode02_01_dynamics/Particle.h; sourceTree = "<group>"; };
+		6DB9CA1F1AD55CE1003AA996 /* Simulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Simulator.cpp; path = ../../GPcode02_01_dynamics/Simulator.cpp; sourceTree = "<group>"; };
+		6DB9CA201AD55CE1003AA996 /* Simulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Simulator.h; path = ../../GPcode02_01_dynamics/Simulator.h; sourceTree = "<group>"; };
+		6DB9CA211AD55CE1003AA996 /* StopWatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StopWatch.cpp; path = ../../GPcode02_01_dynamics/StopWatch.cpp; sourceTree = "<group>"; };
+		6DB9CA221AD55CE1003AA996 /* StopWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StopWatch.h; path = ../../GPcode02_01_dynamics/StopWatch.h; sourceTree = "<group>"; };
+		6DB9CA231AD55CE1003AA996 /* Vec3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vec3d.cpp; path = ../../GPcode02_01_dynamics/Vec3d.cpp; sourceTree = "<group>"; };
+		6DB9CA241AD55CE1003AA996 /* Vec3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vec3d.h; path = ../../GPcode02_01_dynamics/Vec3d.h; sourceTree = "<group>"; };
+		6DB9CA2B1AD55CF6003AA996 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		6DB9CA2C1AD55CF6003AA996 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6DB9CA0D1AD55CC6003AA996 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DB9CA2D1AD55CF6003AA996 /* GLUT.framework in Frameworks */,
+				6DB9CA2E1AD55CF6003AA996 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6DB9CA071AD55CC6003AA996 = {
+			isa = PBXGroup;
+			children = (
+				6DB9CA2B1AD55CF6003AA996 /* GLUT.framework */,
+				6DB9CA2C1AD55CF6003AA996 /* OpenGL.framework */,
+				6DB9CA121AD55CC6003AA996 /* GPcode0201_Xcode */,
+				6DB9CA111AD55CC6003AA996 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6DB9CA111AD55CC6003AA996 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6DB9CA101AD55CC6003AA996 /* GPcode0201_Xcode */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6DB9CA121AD55CC6003AA996 /* GPcode0201_Xcode */ = {
+			isa = PBXGroup;
+			children = (
+				6DB9CA1A1AD55CE1003AA996 /* DynamicSimulator.cpp */,
+				6DB9CA1B1AD55CE1003AA996 /* DynamicSimulator.h */,
+				6DB9CA1C1AD55CE1003AA996 /* main.cpp */,
+				6DB9CA1D1AD55CE1003AA996 /* Particle.cpp */,
+				6DB9CA1E1AD55CE1003AA996 /* Particle.h */,
+				6DB9CA1F1AD55CE1003AA996 /* Simulator.cpp */,
+				6DB9CA201AD55CE1003AA996 /* Simulator.h */,
+				6DB9CA211AD55CE1003AA996 /* StopWatch.cpp */,
+				6DB9CA221AD55CE1003AA996 /* StopWatch.h */,
+				6DB9CA231AD55CE1003AA996 /* Vec3d.cpp */,
+				6DB9CA241AD55CE1003AA996 /* Vec3d.h */,
+			);
+			path = GPcode0201_Xcode;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6DB9CA0F1AD55CC6003AA996 /* GPcode0201_Xcode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DB9CA171AD55CC6003AA996 /* Build configuration list for PBXNativeTarget "GPcode0201_Xcode" */;
+			buildPhases = (
+				6DB9CA0C1AD55CC6003AA996 /* Sources */,
+				6DB9CA0E1AD55CC6003AA996 /* CopyFiles */,
+				6DB9CA0D1AD55CC6003AA996 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GPcode0201_Xcode;
+			productName = GPcode0201_Xcode;
+			productReference = 6DB9CA101AD55CC6003AA996 /* GPcode0201_Xcode */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6DB9CA081AD55CC6003AA996 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "young-min kang";
+				TargetAttributes = {
+					6DB9CA0F1AD55CC6003AA996 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = 6DB9CA0B1AD55CC6003AA996 /* Build configuration list for PBXProject "GPcode0201_Xcode" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6DB9CA071AD55CC6003AA996;
+			productRefGroup = 6DB9CA111AD55CC6003AA996 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6DB9CA0F1AD55CC6003AA996 /* GPcode0201_Xcode */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6DB9CA0C1AD55CC6003AA996 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DB9CA261AD55CE1003AA996 /* main.cpp in Sources */,
+				6DB9CA291AD55CE1003AA996 /* StopWatch.cpp in Sources */,
+				6DB9CA271AD55CE1003AA996 /* Particle.cpp in Sources */,
+				6DB9CA281AD55CE1003AA996 /* Simulator.cpp in Sources */,
+				6DB9CA251AD55CE1003AA996 /* DynamicSimulator.cpp in Sources */,
+				6DB9CA2A1AD55CE1003AA996 /* Vec3d.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6DB9CA151AD55CC6003AA996 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6DB9CA161AD55CC6003AA996 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6DB9CA181AD55CC6003AA996 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6DB9CA191AD55CC6003AA996 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6DB9CA0B1AD55CC6003AA996 /* Build configuration list for PBXProject "GPcode0201_Xcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DB9CA151AD55CC6003AA996 /* Debug */,
+				6DB9CA161AD55CC6003AA996 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DB9CA171AD55CC6003AA996 /* Build configuration list for PBXNativeTarget "GPcode0201_Xcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DB9CA181AD55CC6003AA996 /* Debug */,
+				6DB9CA191AD55CC6003AA996 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6DB9CA081AD55CC6003AA996 /* Project object */;
+}

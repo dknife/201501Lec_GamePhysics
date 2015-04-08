@@ -13,6 +13,8 @@ CVec3d::CVec3d(double a, double b, double c) { x=a; y=b; z=c; }
 //! Copy Constructor
 CVec3d::CVec3d(CVec3d &v) { x=v.x; y=v.y; z=v.z; }
 
+CVec3d::~CVec3d() {}
+
 /*! Sets the vector elements */
 void CVec3d::set(double a, double b, double c)		{ x=a; y=b; z=c;}
 
@@ -20,24 +22,28 @@ void CVec3d::set(double a, double b, double c)		{ x=a; y=b; z=c;}
 void CVec3d::get(double &a, double &b, double &c)	{ a=x; b=y; c=z;}
 
 /*! Vector Addition */
-CVec3d& CVec3d::operator+(const CVec3d& v) const  {
-    return *(new CVec3d(x+v[0], y+v[1], z+v[2]));
+CVec3d CVec3d::operator+(const CVec3d& v) const  {
+    CVec3d res(x+v[0], y+v[1], z+v[2]);
+    return res;
 }
 
 /*! Vector Subtraction */
-CVec3d& CVec3d::operator-(const CVec3d& v) const {
-    return *(new CVec3d(x-v[0], y-v[1], z-v[2]));
+CVec3d CVec3d::operator-(const CVec3d& v) const {
+    CVec3d res(x-v[0], y-v[1], z-v[2]);
+    return res;
 }
 
 /*! Scalar multiplication */
-CVec3d& CVec3d::operator *(const double& s) const {
-    return *(new CVec3d(x*s, y*s, z*s));
+CVec3d CVec3d::operator *(const double& s) const {
+    CVec3d res(x*s, y*s, z*s);
+    return res;
 }
 
 /*! Cross Product
 	- Return: CVec3d */
-CVec3d& CVec3d::operator*(const CVec3d& v) const { // cross product
-    return *(new CVec3d(y*v[2]-z*v[1], -x*v[2]+z*v[0], x*v[1]-y*v[0]));
+CVec3d CVec3d::operator*(const CVec3d& v) const { // cross product
+    CVec3d res(y*v[2]-z*v[1], -x*v[2]+z*v[0], x*v[1]-y*v[0]);
+    return res;
 }
 
 /*! Dot Product
@@ -65,15 +71,17 @@ void	CVec3d::normalize(void) {
 }
 
 /*! Returns a new normalized vector with the same direction */
-CVec3d&	CVec3d::getNormalized(void) {
+CVec3d	CVec3d::getNormalized(void) {
     double l=len();	if(l==0) return *(new CVec3d(0,0,0));
-    return *(new CVec3d(x/l, y/l, z/l));
+    CVec3d res(x/l, y/l, z/l);
+    return res;
 }
 
 
 /*! friend function for scalar X vector*/
-CVec3d& cross(const CVec3d& v1, const CVec3d& v) {
-    return *(new CVec3d(v1.y*v[2]-v1.z*v[1], -v1.x*v[2]+v1.z*v[0], v1.x*v[1]-v1.y*v[0]));
+CVec3d cross(const CVec3d& v1, const CVec3d& v) {
+    CVec3d res(v1.y*v[2]-v1.z*v[1], -v1.x*v[2]+v1.z*v[0], v1.x*v[1]-v1.y*v[0]);
+    return res;
 }
 
 /*!  friend fuction for dot product of two vectors */
@@ -82,6 +90,7 @@ double dot(const CVec3d& v1, const CVec3d v2) {
 }
 
 /*! frien operator for scalar X vector */
-CVec3d& operator*(double s, const CVec3d& v) {
-    return *(new CVec3d(s*v[0], s*v[1], s*v[2]));
+CVec3d operator*(double s, const CVec3d& v) {
+    CVec3d res(s*v[0], s*v[1], s*v[2]);
+    return res;
 }
