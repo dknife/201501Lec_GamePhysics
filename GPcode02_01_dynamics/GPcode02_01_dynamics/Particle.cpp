@@ -43,13 +43,15 @@ void CParticle::drawWithGL(int drawMode) {
 }
 
 void CParticle::randomInit() {
+	
     double speed = rand()%10000 / 10000.0 + 1.0;
     double theta = 2.0*3.141592 * (rand()%10000 / 10000.0);
-    double phi =   2.0*3.141592 * (rand()%10000 / 10000.0);
+    double phi =   3.141592 * (rand()%10000 / 10000.0);
     double vx,vy,vz;
     vy = speed*cos(phi)+2.0;
     vx = speed*cos(theta)*sin(phi);
     vz = speed*sin(theta)*sin(phi);
+
     loc.set(0,1,0);
     vel.set(vx, vy, vz);
     gravity.set(0.0, -9.8, 0.0);
