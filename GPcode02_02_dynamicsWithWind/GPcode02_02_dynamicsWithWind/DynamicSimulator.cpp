@@ -21,22 +21,25 @@ void CDynamicSimulator::clean() {
 }
 
 void CDynamicSimulator::doBeforeSimulation(double dt, double currentTime) {
-    
+	CVec3d windForce(1.0, 0.0, 0.0);
+    for(int i=0;i<NUMPARTS;i++) {
+		particle[i].addForce(windForce);
+	}
 }
 
 void CDynamicSimulator::doSimulation(double dt, double currentTime) {
     for(int i=0;i<NUMPARTS;i++)
         particle[i].simulate(dt, currentTime);
-    
 }
 
-
 void CDynamicSimulator::doAfterSimulation(double dt, double currentTime) {
-    
+    for(int i=0;i<NUMPARTS;i++) {
+		particle[i].resetForce();
+	}
 }
 
 void CDynamicSimulator::visualize(void) {
     for(int i=0;i<NUMPARTS;i++) {
-        particle[i].drawWithGL(POINT_DRAW);
+        particle[i].drawWithGL(SPHERE_DRAW);
     }
 }

@@ -20,7 +20,7 @@ void CParticle::drawWithGL(int drawMode) {
     glPushMatrix();
     glTranslated(loc[0], loc[1], loc[2]);
     if (drawMode == SPHERE_DRAW) {
-        glutWireSphere(radius, 10, 10);
+        glutWireSphere(radius, 6, 6);
     }
     else {
         glBegin(GL_POINTS);
@@ -32,7 +32,7 @@ void CParticle::drawWithGL(int drawMode) {
     glPushMatrix();
     glTranslated(loc[0]+loc[1], 0, loc[2]);
     if (drawMode == SPHERE_DRAW) {
-        glutWireSphere(radius, 10, 10);
+        glutWireSphere(radius, 6, 6);
     }
     else {
         glBegin(GL_POINTS);
@@ -52,18 +52,39 @@ void CParticle::randomInit() {
     vx = speed*cos(theta)*sin(phi);
     vz = speed*sin(theta)*sin(phi);
 
-    loc.set(0,1,0);
-    vel.set(vx, vy, vz);
+    loc.set(0,1,rand()%20000 / 10000.0 - 1.0);
+    //vel.set(vx, vy, vz);
     gravity.set(0.0, -9.8, 0.0);
-    radius = 0.01;
+	vel.set(0.0, 0.0, 0.0);
+    force.set(0.0, 0.0, 0.0);
+    mass = rand()%10000 / 10000.0 + 0.01;
+	radius = mass/10.0;
 }
 
 void CParticle::simulate(double dt, double et) {
-    vel = vel + dt*gravity;
+	dt = 0.01;
+    vel = vel + dt*(gravity + (1.0/mass) * force );
     loc = loc + dt*vel;
 	
+	double elasticity = 0.9;
+
 	if(loc[1]<0) {
-        loc.set(loc[0], -0.9*loc[1], loc[2]);
-        if(vel[1]<0) vel.set(vel[0], -0.9*vel[1], vel[2]);
+        loc.set(loc[0], -elasticity*loc[1], loc[2]);
+        if(vel[1]<0) vel.set(vel[0], -elasticity*vel[1], vel[2]);
     }
+
+	double wallPosition = 5.0;
+	if(loc[0]> wallPosition) { // wall collision
+		double penetration = loc[0] - wallPosition; // always positive
+		loc.set(loc[0] - elasticity*penetration, loc[1], loc[2]);
+		if(vel[0]>0) vel.set(-elasticity*vel[0], vel[1], vel[2]);
+	}
+}
+
+void CParticle::resetForce(void) {
+	this->force.set(0.0, 0.0, 0.0);
+}
+
+void CParticle::addForce(CVec3d &f) {
+	this->force = this->force + f;
 }

@@ -23,7 +23,8 @@ enum DrawMode {
 
 class CParticle {
 public:
-    float radius;
+    double radius;
+	double mass;
     
     CVec3d loc;
     CVec3d vel;
@@ -35,6 +36,9 @@ public:
 
 	void setPosition(double x, double y, double z);
 	void setRadius(double r);
+
+	void resetForce(void);
+	void addForce(CVec3d &f);
 
     void randomInit(void);
 	void drawWithGL(int drawMode = SPHERE_DRAW);

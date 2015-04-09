@@ -11,7 +11,7 @@
 #include "Simulator.h"
 #include "Particle.h"
 
-#define NUMPARTS 10000
+#define NUMPARTS 1000
 
 class CDynamicSimulator : public CSimulator {
     CParticle particle[NUMPARTS];
