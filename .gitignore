@@ -1,3 +1,5 @@
+*.dat
+
 # power point and hwp
 *.hwp
 *.ppt
