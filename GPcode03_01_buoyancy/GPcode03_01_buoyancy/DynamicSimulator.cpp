@@ -1,5 +1,5 @@
 //
-//  KinematicsSimulator.cpp
+//  DynamicSimulator.cpp
 //  GPcode01_01_xcode
 //
 //  Created by young-min kang on 3/27/15.
