@@ -1,5 +1,5 @@
 //
-//  KinematicsSimulator.h
+//  DynamicSimulator.h
 //
 //  Created by young-min kang on 4/5/15.
 //  Copyright (c) 2015 young-min kang. All rights reserved.
