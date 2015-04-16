@@ -72,12 +72,31 @@ void CParticle::simulate(double dt, double et) {
         if(vel[1]<0) vel.set(vel[0], -elasticity*vel[1], vel[2]);
     }
 
-	double wallPosition = 5.0;
+	double wallPosition = 2.5;
 	if(loc[0]> wallPosition) { // wall collision
-		double penetration = loc[0] - wallPosition; // always positive
+		double penetration = loc[0] - wallPosition;
 		loc.set(loc[0] - elasticity*penetration, loc[1], loc[2]);
 		if(vel[0]>0) vel.set(-elasticity*vel[0], vel[1], vel[2]);
 	}
+	wallPosition = -2.5;
+	if(loc[0]< wallPosition) { // wall collision
+		double penetration = loc[0] - wallPosition;
+		loc.set(loc[0] - elasticity*penetration, loc[1], loc[2]);
+		if(vel[0]<0) vel.set(-elasticity*vel[0], vel[1], vel[2]);
+	}
+	wallPosition = 2.5;
+	if(loc[2]> wallPosition) { // wall collision
+		double penetration = loc[2] - wallPosition;
+		loc.set(loc[0], loc[1], loc[2] - elasticity*penetration);
+		if(vel[2]>0) vel.set(vel[0], vel[1], -elasticity*vel[2]);
+	}
+	wallPosition = -2.5;
+	if(loc[2]< wallPosition) { // wall collision
+		double penetration = loc[2] - wallPosition;
+		loc.set(loc[0], loc[1], loc[2] - elasticity*penetration);
+		if(vel[2]<0) vel.set(vel[0], vel[1], -elasticity*vel[2]);
+	}
+
 }
 
 void CParticle::resetForce(void) {
