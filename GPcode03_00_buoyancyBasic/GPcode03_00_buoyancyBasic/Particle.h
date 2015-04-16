@@ -21,15 +21,8 @@ enum DrawMode {
     SPHERE_DRAW
 };
 
-enum MaterialType {
-	TYPE_WOOD,
-	TYPE_STEEL,
-	NUM_MATERIAL_TYPES
-};
-
 class CParticle {
 public:
-	int type;	
     double radius;
 	double mass;
     
@@ -41,7 +34,6 @@ public:
 public:
 	CParticle();
 
-	void setType(int t);
 	void setPosition(double x, double y, double z);
 	void setRadius(double r);
 
