@@ -58,7 +58,7 @@ void CParticle::randomInit() {
     mass = 1;
 	radius = 0.1;
 	type = TYPE_WOOD + rand()%NUM_MATERIAL_TYPES;
-	if(type == TYPE_STEEL) mass*=10.0;
+	if(type == TYPE_STEEL) mass*=2.0;
 }
 void CParticle::simulate(double dt, double et) {
 	double rho = 350;
@@ -69,7 +69,8 @@ void CParticle::simulate(double dt, double et) {
 		CVec3d f(0.0, rho*9.8*vol, 0.0);
 		addForce(f);
 		// drag force
-		CVec3d drag = -0.5 * vel;
+        CVec3d drag;
+        drag = -2.0 * vel;
 		addForce(drag);
 	}
 	
