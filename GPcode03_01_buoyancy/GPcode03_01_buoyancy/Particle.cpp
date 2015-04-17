@@ -60,57 +60,87 @@ void CParticle::randomInit() {
 	type = TYPE_WOOD + rand()%NUM_MATERIAL_TYPES;
 	if(type == TYPE_STEEL) mass*=2.0;
 }
-void CParticle::simulate(double dt, double et) {
-	double rho = 350;
-	double vol;
-	if(loc[1] < 1.0) { // in water
-		// buoyancy
-		vol = 3.14159*(4/3)*radius*radius*radius;
-		CVec3d f(0.0, rho*9.8*vol, 0.0);
-		addForce(f);
-		// drag force
-        CVec3d drag;
-        drag = -2.0 * vel;
-		addForce(drag);
-	}
-	
 
-	if(dt>0.1) dt=0.1;
-    vel = vel + dt*(gravity + (1.0/mass) * force );
-    loc = loc + dt*vel;
-	
-	double elasticity = 0.9;
-
-	if(loc[1]<0) {
+void CParticle::handleCollision(void) {
+    double elasticity = 0.9;
+    
+    if(loc[1]<0) {
         loc.set(loc[0], -elasticity*loc[1], loc[2]);
         if(vel[1]<0) vel.set(vel[0], -elasticity*vel[1], vel[2]);
     }
 
-	double wallPosition = 2.5;
-	if(loc[0]> wallPosition) { // wall collision
-		double penetration = loc[0] - wallPosition;
-		loc.set(loc[0] - elasticity*penetration, loc[1], loc[2]);
-		if(vel[0]>0) vel.set(-elasticity*vel[0], vel[1], vel[2]);
-	}
-	wallPosition = -2.5;
-	if(loc[0]< wallPosition) { // wall collision
-		double penetration = loc[0] - wallPosition;
-		loc.set(loc[0] - elasticity*penetration, loc[1], loc[2]);
-		if(vel[0]<0) vel.set(-elasticity*vel[0], vel[1], vel[2]);
-	}
-	wallPosition = 2.5;
-	if(loc[2]> wallPosition) { // wall collision
-		double penetration = loc[2] - wallPosition;
-		loc.set(loc[0], loc[1], loc[2] - elasticity*penetration);
-		if(vel[2]>0) vel.set(vel[0], vel[1], -elasticity*vel[2]);
-	}
-	wallPosition = -2.5;
-	if(loc[2]< wallPosition) { // wall collision
-		double penetration = loc[2] - wallPosition;
-		loc.set(loc[0], loc[1], loc[2] - elasticity*penetration);
-		if(vel[2]<0) vel.set(vel[0], vel[1], -elasticity*vel[2]);
-	}
+    double wallPosition = 2.5;
+    if(loc[0]> wallPosition) { // wall collision
+        double penetration = loc[0] - wallPosition;
+        loc.set(loc[0] - elasticity*penetration, loc[1], loc[2]);
+        if(vel[0]>0) vel.set(-elasticity*vel[0], vel[1], vel[2]);
+    }
+    wallPosition = -2.5;
+    if(loc[0]< wallPosition) { // wall collision
+        double penetration = loc[0] - wallPosition;
+        loc.set(loc[0] - elasticity*penetration, loc[1], loc[2]);
+        if(vel[0]<0) vel.set(-elasticity*vel[0], vel[1], vel[2]);
+    }
+    wallPosition = 2.5;
+    if(loc[2]> wallPosition) { // wall collision
+        double penetration = loc[2] - wallPosition;
+        loc.set(loc[0], loc[1], loc[2] - elasticity*penetration);
+        if(vel[2]>0) vel.set(vel[0], vel[1], -elasticity*vel[2]);
+    }
+    wallPosition = -2.5;
+    if(loc[2]< wallPosition) { // wall collision
+        double penetration = loc[2] - wallPosition;
+        loc.set(loc[0], loc[1], loc[2] - elasticity*penetration);
+        if(vel[2]<0) vel.set(vel[0], vel[1], -elasticity*vel[2]);
+    }
+}
 
+void CParticle::forceIntegration(double dt, double et) {
+    
+    if(dt>0.1) dt=0.1;
+    vel = vel + dt*(gravity + (1.0/mass) * force );
+    loc = loc + dt*vel;
+}
+
+void CParticle::computeBuoyancyAndDrag(void) {
+    
+    const double PI = 3.141492;
+    double r2 = radius*radius;
+    double r3 = radius*r2;
+    double waterLevel = 1.0;
+    double rho = 300;
+    double vol;
+    double hemiSphereVol = (0.6666666666)*PI*r3;
+    if(loc[1] < radius + waterLevel) { // in water
+        double immersedDepth = radius+waterLevel - loc[1];
+        if(immersedDepth>2.0*radius)immersedDepth = 2.0*radius;
+        
+        if(immersedDepth < radius) {
+            double intUp = radius - immersedDepth;
+            vol = hemiSphereVol - PI*(r2*intUp - 0.33333333*intUp*intUp*intUp);
+        }
+        else {
+            double intUp = immersedDepth - radius;
+            vol = hemiSphereVol + PI*(r2*intUp - 0.33333333*intUp*intUp*intUp);
+
+        }
+        // buoyancy
+        CVec3d f(0.0, rho*9.8*vol, 0.0);
+        addForce(f);
+        // drag force
+        CVec3d drag;
+        drag = -( 1.5 * vel.len() ) * vel;
+        addForce(drag);
+    }
+    
+}
+void CParticle::simulate(double dt, double et) {
+    
+    computeBuoyancyAndDrag();
+	
+    forceIntegration(dt, et);
+    handleCollision();
+    
 }
 
 void CParticle::resetForce(void) {

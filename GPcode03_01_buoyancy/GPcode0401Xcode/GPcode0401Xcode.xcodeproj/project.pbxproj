@@ -31,17 +31,17 @@
 
 /* Begin PBXFileReference section */
 		6DED932B1ADFA98400109FDF /* GPcode0401Xcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GPcode0401Xcode; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DED93351ADFA9AD00109FDF /* DynamicSimulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DynamicSimulator.cpp; path = ../../GPcode03_01_buoyancy/DynamicSimulator.cpp; sourceTree = "<group>"; };
-		6DED93361ADFA9AD00109FDF /* DynamicSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DynamicSimulator.h; path = ../../GPcode03_01_buoyancy/DynamicSimulator.h; sourceTree = "<group>"; };
-		6DED93371ADFA9AD00109FDF /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../GPcode03_01_buoyancy/main.cpp; sourceTree = "<group>"; };
-		6DED93381ADFA9AD00109FDF /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Particle.cpp; path = ../../GPcode03_01_buoyancy/Particle.cpp; sourceTree = "<group>"; };
-		6DED93391ADFA9AD00109FDF /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Particle.h; path = ../../GPcode03_01_buoyancy/Particle.h; sourceTree = "<group>"; };
-		6DED933A1ADFA9AD00109FDF /* Simulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Simulator.cpp; path = ../../GPcode03_01_buoyancy/Simulator.cpp; sourceTree = "<group>"; };
-		6DED933B1ADFA9AD00109FDF /* Simulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Simulator.h; path = ../../GPcode03_01_buoyancy/Simulator.h; sourceTree = "<group>"; };
-		6DED933C1ADFA9AD00109FDF /* StopWatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StopWatch.cpp; path = ../../GPcode03_01_buoyancy/StopWatch.cpp; sourceTree = "<group>"; };
-		6DED933D1ADFA9AD00109FDF /* StopWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StopWatch.h; path = ../../GPcode03_01_buoyancy/StopWatch.h; sourceTree = "<group>"; };
-		6DED933E1ADFA9AD00109FDF /* Vec3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vec3d.cpp; path = ../../GPcode03_01_buoyancy/Vec3d.cpp; sourceTree = "<group>"; };
-		6DED933F1ADFA9AD00109FDF /* Vec3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vec3d.h; path = ../../GPcode03_01_buoyancy/Vec3d.h; sourceTree = "<group>"; };
+		6DED93351ADFA9AD00109FDF /* DynamicSimulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DynamicSimulator.cpp; path = ../GPcode03_01_buoyancy/DynamicSimulator.cpp; sourceTree = SOURCE_ROOT; };
+		6DED93361ADFA9AD00109FDF /* DynamicSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DynamicSimulator.h; path = ../GPcode03_01_buoyancy/DynamicSimulator.h; sourceTree = SOURCE_ROOT; };
+		6DED93371ADFA9AD00109FDF /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../GPcode03_01_buoyancy/main.cpp; sourceTree = SOURCE_ROOT; };
+		6DED93381ADFA9AD00109FDF /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Particle.cpp; path = ../GPcode03_01_buoyancy/Particle.cpp; sourceTree = SOURCE_ROOT; };
+		6DED93391ADFA9AD00109FDF /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Particle.h; path = ../GPcode03_01_buoyancy/Particle.h; sourceTree = SOURCE_ROOT; };
+		6DED933A1ADFA9AD00109FDF /* Simulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Simulator.cpp; path = ../GPcode03_01_buoyancy/Simulator.cpp; sourceTree = SOURCE_ROOT; };
+		6DED933B1ADFA9AD00109FDF /* Simulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Simulator.h; path = ../GPcode03_01_buoyancy/Simulator.h; sourceTree = SOURCE_ROOT; };
+		6DED933C1ADFA9AD00109FDF /* StopWatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StopWatch.cpp; path = ../GPcode03_01_buoyancy/StopWatch.cpp; sourceTree = SOURCE_ROOT; };
+		6DED933D1ADFA9AD00109FDF /* StopWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StopWatch.h; path = ../GPcode03_01_buoyancy/StopWatch.h; sourceTree = SOURCE_ROOT; };
+		6DED933E1ADFA9AD00109FDF /* Vec3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vec3d.cpp; path = ../GPcode03_01_buoyancy/Vec3d.cpp; sourceTree = SOURCE_ROOT; };
+		6DED933F1ADFA9AD00109FDF /* Vec3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vec3d.h; path = ../GPcode03_01_buoyancy/Vec3d.h; sourceTree = SOURCE_ROOT; };
 		6DED93461ADFA9BE00109FDF /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		6DED93471ADFA9BE00109FDF /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -273,6 +273,7 @@
 				6DED93341ADFA98400109FDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

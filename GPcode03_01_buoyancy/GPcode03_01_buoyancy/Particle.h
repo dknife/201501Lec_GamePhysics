@@ -38,6 +38,11 @@ public:
     CVec3d force;
     CVec3d gravity;
     
+private:
+    void handleCollision(void);
+    void forceIntegration(double dt, double et);
+    void computeBuoyancyAndDrag(void);
+    
 public:
 	CParticle();
 
