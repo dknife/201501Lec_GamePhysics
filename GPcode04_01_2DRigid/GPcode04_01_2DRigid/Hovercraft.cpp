@@ -12,7 +12,7 @@
 
 
 CHovercraft::CHovercraft() :
-mass(1.0), inertia(1.0), angle(0.0), aVel(0.0), torque(0.0) {
+mass(1.0), inertia(0.1), angle(0.0), aVel(0.0), torque(0.0) {
     loc.set(0.0, 0.0, 0.0);
     vel.set(0.0, 0.0, 0.0);
     force.set(0.0, 0.0, 0.0);
