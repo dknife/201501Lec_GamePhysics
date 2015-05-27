@@ -9,27 +9,22 @@
 #include "DynamicSimulator.h"
 #include <stdlib.h>
 
+
+double rand(double min, double max) {
+    return (max-min)*(double(rand()%10001)/10000.0)+min;
+}
+
 CDynamicSimulator::CDynamicSimulator() : CSimulator() {}
 
 
 void CDynamicSimulator::init() {
 
 	for(int i=0;i<NUMPARTS;i++) {
-        particle[i].setPosition(i, 1, 0);
-        particle[i].setVelocity(0,0,0);
-		particle[i].setMass(1.0);
+        particle[i].setPosition(rand(-6,6), rand(-6,6), rand(-6,6));
+        particle[i].setVelocity(rand(-6,6), rand(-6,6), rand(-6,6));
+		particle[i].setMass(rand(0.01,0.25));
 	}
     
-    
-    for(int i=0;i<NUMPARTS-1;i++) {
-        spring[i].setParticleArray(particle);
-        spring[i].setParticles(i, i+1);
-        spring[i].setSpringCoefficient(10.0);
-        spring[i].setDampingCoefficient(0.1);
-        spring[i].setRestLength(1.0);
-    }
-	
-    mySpringDamper.setSpringNetwork(spring, NUMPARTS-1, particle, NUMPARTS);
 }
 
 void CDynamicSimulator::clean() {
@@ -41,10 +36,33 @@ void CDynamicSimulator::doBeforeSimulation(double dt, double currentTime) {
 }
 
 void CDynamicSimulator::doSimulation(double dt, double currentTime) {
+    
+    if(dt>0.01)dt=0.01; // maximum dt
+    
+    CVec3d forcei;
+    CVec3d forcej;
+    for (int i=0; i<NUMPARTS; i++) {
+        for (int j=i+1; j<NUMPARTS; j++) {
+            forcei = computeAttraction(i, j);
+            forcej = -1.0*forcei;
+            particle[i].addForce(forcei);
+            particle[j].addForce(forcej);
+        }
+    }
+    
+    for (int i=0; i<NUMPARTS; i++) {
+        particle[i].simulate(dt, currentTime);
+    }
+    
+    for (int i=0; i<NUMPARTS; i++) {
+        for (int j=i+1; j<NUMPARTS; j++) {
+            collisionHandler(i, j);
+        }
+    }
+    
+    
 
-
-    mySpringDamper.simulate(dt);
-	
+    
 }
 
 void CDynamicSimulator::doAfterSimulation(double dt, double currentTime) {
@@ -59,29 +77,56 @@ void CDynamicSimulator::visualize(void) {
     }
 }
 
+CVec3d CDynamicSimulator::computeAttraction(int i, int j) {
+    // collision detect
+    CVec3d xi; xi = particle[i].getPosition();
+    CVec3d xj; xj = particle[j].getPosition();
+    CVec3d xij; xij = xj-xi;
+    double dist = xij.len();
+    xij.normalize();
+    double mi = particle[i].getMass();
+    double mj = particle[j].getMass();
+    
+    double G = 50.5;
+    CVec3d force;
+    force = (G*mi*mj/(dist*dist))*xij;
+    return force;
+    
+}
+
 void CDynamicSimulator::collisionHandler(int i, int j) {
 	// collision detect
     CVec3d p1; p1 = particle[i].getPosition();
     CVec3d p2; p2 = particle[j].getPosition();
     CVec3d N ; N = p1 - p2;
 	double dist = N.len();
+    double e = 0.1;
 	if(dist < particle[i].getRadius() + particle[j].getRadius()) {
+        
+        double penetration = particle[i].getRadius() + particle[j].getRadius() - dist;
+        
 		// collision detected
 		N.normalize();
         CVec3d v1; v1 = particle[i].getVelocity();
         CVec3d v2; v2 = particle[j].getVelocity();
-		double v1N = v1 ^ N;
-		double v2N = v2 ^ N;
+		double v1N = v1 ^ N; // velocity along the line of action
+		double v2N = v2 ^ N; // velocity along the line of action
 		double m1 = particle[i].getMass();
 		double m2 = particle[j].getMass();
 		// approaching ?
-		if( v2N - v1N > 0 ) { // approaching
-			double v1New = ( (m1-m2)*v1N + 2.0*m2*v2N ) / (m1+m2);
-			double v2New = ( (m2-m1)*v2N + 2.0*m1*v1N ) / (m1+m2);
+		if( v1N-v2N < 0 ) { // approaching
+            double vr = v1N - v2N;
+            double J = -vr*(e+1.0)/(1.0/m1 + 1.0/m2);
+			double v1New = v1N + J/m1;
+            double v2New = v2N - J/m2;
 			v1 = v1 - v1N * N + v1New*N;
 			v2 = v2 - v2N * N + v2New*N;
 			particle[i].setVelocity(v1.x, v1.y, v1.z);
 			particle[j].setVelocity(v2.x, v2.y, v2.z);
-		}	
+		}
+        p1 = p1 + ((1.0+e)*penetration)*N;
+        p2 = p2 - ((1.0+e)*penetration)*N;
+        particle[i].setPosition(p1.x, p1.y, p1.z);
+        particle[j].setPosition(p2.x, p2.y, p2.z);
 	}
 }

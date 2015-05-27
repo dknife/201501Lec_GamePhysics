@@ -11,7 +11,7 @@
 CVec3d::CVec3d() { x=0; y=0; z=0; }
 CVec3d::CVec3d(double a, double b, double c) { x=a; y=b; z=c; }
 //! Copy Constructor
-CVec3d::CVec3d(CVec3d &v) { x=v.x; y=v.y; z=v.z; }
+CVec3d::CVec3d(CVec3d &v) { this->x=v.x; this->y=v.y; this->z=v.z; }
 
 CVec3d::~CVec3d() {}
 

@@ -18,7 +18,7 @@ void CParticle::setVelocity(double vx, double vy, double vz) {
 
 void CParticle::setMass(double m) {
 	mass = m;
-	radius = mass/10.0;
+    radius = sqrt(mass); 
 }
 CVec3d CParticle::getPosition() {
 	return loc;
@@ -42,7 +42,7 @@ void CParticle::drawWithGL(int drawMode) {
     glPushMatrix();
     glTranslated(loc[0], loc[1], loc[2]);
     if (drawMode == SPHERE_DRAW) {
-        glutWireSphere(radius, 20, 20);
+        glutWireSphere(radius*0.5, 15, 15);
     }
     else {
         glBegin(GL_POINTS);

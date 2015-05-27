@@ -11,7 +11,6 @@
 		6D3EC4B11B15DD23000A2DB6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D3EC4A51B15DD23000A2DB6 /* main.cpp */; };
 		6D3EC4B21B15DD23000A2DB6 /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D3EC4A61B15DD23000A2DB6 /* Particle.cpp */; };
 		6D3EC4B31B15DD23000A2DB6 /* Simulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D3EC4A81B15DD23000A2DB6 /* Simulator.cpp */; };
-		6D3EC4B41B15DD23000A2DB6 /* SpringDamper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D3EC4AA1B15DD23000A2DB6 /* SpringDamper.cpp */; };
 		6D3EC4B51B15DD23000A2DB6 /* StopWatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D3EC4AC1B15DD23000A2DB6 /* StopWatch.cpp */; };
 		6D3EC4B61B15DD23000A2DB6 /* Vec3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D3EC4AE1B15DD23000A2DB6 /* Vec3d.cpp */; };
 		6D3EC4B91B15DD31000A2DB6 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D3EC4B71B15DD31000A2DB6 /* GLUT.framework */; };
@@ -39,8 +38,6 @@
 		6D3EC4A71B15DD23000A2DB6 /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Particle.h; sourceTree = "<group>"; };
 		6D3EC4A81B15DD23000A2DB6 /* Simulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Simulator.cpp; sourceTree = "<group>"; };
 		6D3EC4A91B15DD23000A2DB6 /* Simulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Simulator.h; sourceTree = "<group>"; };
-		6D3EC4AA1B15DD23000A2DB6 /* SpringDamper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpringDamper.cpp; sourceTree = "<group>"; };
-		6D3EC4AB1B15DD23000A2DB6 /* SpringDamper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringDamper.h; sourceTree = "<group>"; };
 		6D3EC4AC1B15DD23000A2DB6 /* StopWatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StopWatch.cpp; sourceTree = "<group>"; };
 		6D3EC4AD1B15DD23000A2DB6 /* StopWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopWatch.h; sourceTree = "<group>"; };
 		6D3EC4AE1B15DD23000A2DB6 /* Vec3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vec3d.cpp; sourceTree = "<group>"; };
@@ -90,8 +87,6 @@
 				6D3EC4A71B15DD23000A2DB6 /* Particle.h */,
 				6D3EC4A81B15DD23000A2DB6 /* Simulator.cpp */,
 				6D3EC4A91B15DD23000A2DB6 /* Simulator.h */,
-				6D3EC4AA1B15DD23000A2DB6 /* SpringDamper.cpp */,
-				6D3EC4AB1B15DD23000A2DB6 /* SpringDamper.h */,
 				6D3EC4AC1B15DD23000A2DB6 /* StopWatch.cpp */,
 				6D3EC4AD1B15DD23000A2DB6 /* StopWatch.h */,
 				6D3EC4AE1B15DD23000A2DB6 /* Vec3d.cpp */,
@@ -160,7 +155,6 @@
 				6D3EC4B51B15DD23000A2DB6 /* StopWatch.cpp in Sources */,
 				6D3EC4B61B15DD23000A2DB6 /* Vec3d.cpp in Sources */,
 				6D3EC4B21B15DD23000A2DB6 /* Particle.cpp in Sources */,
-				6D3EC4B41B15DD23000A2DB6 /* SpringDamper.cpp in Sources */,
 				6D3EC4B31B15DD23000A2DB6 /* Simulator.cpp in Sources */,
 				6D3EC4B01B15DD23000A2DB6 /* DynamicSimulator.cpp in Sources */,
 			);
@@ -279,6 +273,7 @@
 				6D3EC4A21B15DCE5000A2DB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

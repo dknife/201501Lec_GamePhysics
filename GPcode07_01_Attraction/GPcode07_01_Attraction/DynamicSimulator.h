@@ -10,17 +10,11 @@
 
 #include "Simulator.h"
 #include "Particle.h"
-#include "SpringDamper.h"
 
-
-#define NUMPARTS 3
+#define NUMPARTS 300
 
 class CDynamicSimulator : public CSimulator {
-    CSpring spring[NUMPARTS-1];
     CParticle particle[NUMPARTS];
-    
-    CSpringDamperModel mySpringDamper;
-
     
 public:
     CDynamicSimulator();
@@ -39,6 +33,7 @@ private:
     // Visualization of the simulation
     void visualize(void);
 
+    CVec3d computeAttraction(int i, int j);
 	void collisionHandler(int i, int j);
 };
 
