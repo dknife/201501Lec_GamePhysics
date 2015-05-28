@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>10BE66DF-7B33-429F-9C97-0B04097E5A19</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>GPcode07_01_Attraction</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>E3397D5260AC861F5B16468C4282A1C92E043EC1</key>
 		<string>https://github.com/dknife/Lecture_GamePhysics.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>GPcode07_01_Attraction/GPcode07_01_Attraction.xcodeproj/project.xcworkspace</string>
+	<string>GPcode07_01_Attraction/GPcode07_01_Attraction.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>E3397D5260AC861F5B16468C4282A1C92E043EC1</key>

@@ -42,7 +42,7 @@ void CParticle::drawWithGL(int drawMode) {
     glPushMatrix();
     glTranslated(loc[0], loc[1], loc[2]);
     if (drawMode == SPHERE_DRAW) {
-        glutWireSphere(radius*0.5, 15, 15);
+        glutWireSphere(radius, 15, 15);
     }
     else {
         glBegin(GL_POINTS);

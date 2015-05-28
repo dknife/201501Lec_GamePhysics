@@ -8,7 +8,7 @@
 
 #include "DynamicSimulator.h"
 #include <stdlib.h>
-
+#include <math.h>
 
 double rand(double min, double max) {
     return (max-min)*(double(rand()%10001)/10000.0)+min;
@@ -20,9 +20,9 @@ CDynamicSimulator::CDynamicSimulator() : CSimulator() {}
 void CDynamicSimulator::init() {
 
 	for(int i=0;i<NUMPARTS;i++) {
-        particle[i].setPosition(rand(-6,6), rand(-6,6), rand(-6,6));
-        particle[i].setVelocity(rand(-6,6), rand(-6,6), rand(-6,6));
-		particle[i].setMass(rand(0.01,0.25));
+        particle[i].setPosition(rand(-4,4), rand(-4,4), rand(-4,4));
+        particle[i].setVelocity(rand(-1,1), rand(-1,1), rand(-1,1));
+		particle[i].setMass(rand(0.01,0.1));
 	}
     
 }
@@ -81,13 +81,16 @@ CVec3d CDynamicSimulator::computeAttraction(int i, int j) {
     // collision detect
     CVec3d xi; xi = particle[i].getPosition();
     CVec3d xj; xj = particle[j].getPosition();
+    double minDist = particle[i].getRadius()+particle[j].getRadius();
     CVec3d xij; xij = xj-xi;
     double dist = xij.len();
+    if(dist<minDist) dist=minDist;
+    
     xij.normalize();
     double mi = particle[i].getMass();
     double mj = particle[j].getMass();
     
-    double G = 50.5;
+    double G = 20;
     CVec3d force;
     force = (G*mi*mj/(dist*dist))*xij;
     return force;
@@ -124,8 +127,8 @@ void CDynamicSimulator::collisionHandler(int i, int j) {
 			particle[i].setVelocity(v1.x, v1.y, v1.z);
 			particle[j].setVelocity(v2.x, v2.y, v2.z);
 		}
-        p1 = p1 + ((1.0+e)*penetration)*N;
-        p2 = p2 - ((1.0+e)*penetration)*N;
+        p1 = p1 + 0.5*((1.0+e)*penetration)*N;
+        p2 = p2 - 0.5*((1.0+e)*penetration)*N;
         particle[i].setPosition(p1.x, p1.y, p1.z);
         particle[j].setPosition(p2.x, p2.y, p2.z);
 	}
