@@ -37,7 +37,7 @@ double CParticle::getRadius() {
 
 
 void CParticle::drawWithGL(int drawMode) {
-    glColor3f(1.0, 0.5, 0.0);
+    glColor3f(1.0, 1.0, 1.0);
 
     glPushMatrix();
     glTranslated(loc[0], loc[1], loc[2]);

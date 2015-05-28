@@ -88,7 +88,7 @@ void drawAxes(void) {
 
 
 void Init(void) {
-	glClearColor(0.75, 0.75, 0.75, 0);
+	glClearColor(0.0, 0.0, 0.0, 0);
     Simulator->init();
     glPointSize(2);
 
