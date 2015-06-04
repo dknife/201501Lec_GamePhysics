@@ -68,7 +68,8 @@ void reshapeFunction(int w, int h) {
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	glViewport(0, 0, w, h);
-    gluPerspective(60, ratio, 0.1, 5000);
+    //gluPerspective(60, ratio, 0.1, 5000);
+    glOrtho(-1500*ratio, 1500*ratio, -1500, 1500, -1000, 1000);
 	glMatrixMode(GL_MODELVIEW);
 }
 
@@ -125,7 +126,10 @@ void displayFunction(void) {
 
 
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	setupCamera(0, 2500, 0, 0, 0, 0, 1, 0, 0);
+    
+    glLoadIdentity();
+	//setupCamera(0, 2500, 0, 0, 0, 0, 1, 0, 0);
+    glRotated(90, 1, 0, 0);
     
     
     // check DT (in microsecond) from StopWatch and store it to "deltaTime" (in seconds)

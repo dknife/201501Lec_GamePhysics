@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D393CEB1B1ECF2700D7C36D /* DynamicSimulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D393CE01B1ECF2700D7C36D /* DynamicSimulator.cpp */; };
-		6D393CEC1B1ECF2700D7C36D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D393CE21B1ECF2700D7C36D /* main.cpp */; };
-		6D393CED1B1ECF2700D7C36D /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D393CE31B1ECF2700D7C36D /* Particle.cpp */; };
-		6D393CEE1B1ECF2700D7C36D /* Simulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D393CE51B1ECF2700D7C36D /* Simulator.cpp */; };
-		6D393CEF1B1ECF2700D7C36D /* StopWatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D393CE71B1ECF2700D7C36D /* StopWatch.cpp */; };
-		6D393CF01B1ECF2700D7C36D /* Vec3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D393CE91B1ECF2700D7C36D /* Vec3d.cpp */; };
 		6D393CF31B1ECF3400D7C36D /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D393CF11B1ECF3400D7C36D /* GLUT.framework */; };
 		6D393CF41B1ECF3400D7C36D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D393CF21B1ECF3400D7C36D /* OpenGL.framework */; };
+		6DD4C28F1B20282C003C87F2 /* DynamicSimulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DD4C2841B20282C003C87F2 /* DynamicSimulator.cpp */; };
+		6DD4C2901B20282C003C87F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DD4C2861B20282C003C87F2 /* main.cpp */; };
+		6DD4C2911B20282C003C87F2 /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DD4C2871B20282C003C87F2 /* Particle.cpp */; };
+		6DD4C2921B20282C003C87F2 /* Simulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DD4C2891B20282C003C87F2 /* Simulator.cpp */; };
+		6DD4C2931B20282C003C87F2 /* StopWatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DD4C28B1B20282C003C87F2 /* StopWatch.cpp */; };
+		6DD4C2941B20282C003C87F2 /* Vec3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DD4C28D1B20282C003C87F2 /* Vec3d.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,19 +31,19 @@
 
 /* Begin PBXFileReference section */
 		6D393CD61B1ECF0500D7C36D /* XcodeBilliard */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XcodeBilliard; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D393CE01B1ECF2700D7C36D /* DynamicSimulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DynamicSimulator.cpp; path = ../../GPcode07_01_Attraction/DynamicSimulator.cpp; sourceTree = "<group>"; };
-		6D393CE11B1ECF2700D7C36D /* DynamicSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DynamicSimulator.h; path = ../../GPcode07_01_Attraction/DynamicSimulator.h; sourceTree = "<group>"; };
-		6D393CE21B1ECF2700D7C36D /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../GPcode07_01_Attraction/main.cpp; sourceTree = "<group>"; };
-		6D393CE31B1ECF2700D7C36D /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Particle.cpp; path = ../../GPcode07_01_Attraction/Particle.cpp; sourceTree = "<group>"; };
-		6D393CE41B1ECF2700D7C36D /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Particle.h; path = ../../GPcode07_01_Attraction/Particle.h; sourceTree = "<group>"; };
-		6D393CE51B1ECF2700D7C36D /* Simulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Simulator.cpp; path = ../../GPcode07_01_Attraction/Simulator.cpp; sourceTree = "<group>"; };
-		6D393CE61B1ECF2700D7C36D /* Simulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Simulator.h; path = ../../GPcode07_01_Attraction/Simulator.h; sourceTree = "<group>"; };
-		6D393CE71B1ECF2700D7C36D /* StopWatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StopWatch.cpp; path = ../../GPcode07_01_Attraction/StopWatch.cpp; sourceTree = "<group>"; };
-		6D393CE81B1ECF2700D7C36D /* StopWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StopWatch.h; path = ../../GPcode07_01_Attraction/StopWatch.h; sourceTree = "<group>"; };
-		6D393CE91B1ECF2700D7C36D /* Vec3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vec3d.cpp; path = ../../GPcode07_01_Attraction/Vec3d.cpp; sourceTree = "<group>"; };
-		6D393CEA1B1ECF2700D7C36D /* Vec3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vec3d.h; path = ../../GPcode07_01_Attraction/Vec3d.h; sourceTree = "<group>"; };
 		6D393CF11B1ECF3400D7C36D /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		6D393CF21B1ECF3400D7C36D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		6DD4C2841B20282C003C87F2 /* DynamicSimulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DynamicSimulator.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_01_Billiard/GPcode07_01_Attraction/DynamicSimulator.cpp; sourceTree = "<absolute>"; };
+		6DD4C2851B20282C003C87F2 /* DynamicSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DynamicSimulator.h; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_01_Billiard/GPcode07_01_Attraction/DynamicSimulator.h; sourceTree = "<absolute>"; };
+		6DD4C2861B20282C003C87F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_01_Billiard/GPcode07_01_Attraction/main.cpp; sourceTree = "<absolute>"; };
+		6DD4C2871B20282C003C87F2 /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Particle.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_01_Billiard/GPcode07_01_Attraction/Particle.cpp; sourceTree = "<absolute>"; };
+		6DD4C2881B20282C003C87F2 /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Particle.h; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_01_Billiard/GPcode07_01_Attraction/Particle.h; sourceTree = "<absolute>"; };
+		6DD4C2891B20282C003C87F2 /* Simulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Simulator.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_01_Billiard/GPcode07_01_Attraction/Simulator.cpp; sourceTree = "<absolute>"; };
+		6DD4C28A1B20282C003C87F2 /* Simulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Simulator.h; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_01_Billiard/GPcode07_01_Attraction/Simulator.h; sourceTree = "<absolute>"; };
+		6DD4C28B1B20282C003C87F2 /* StopWatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StopWatch.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_01_Billiard/GPcode07_01_Attraction/StopWatch.cpp; sourceTree = "<absolute>"; };
+		6DD4C28C1B20282C003C87F2 /* StopWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StopWatch.h; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_01_Billiard/GPcode07_01_Attraction/StopWatch.h; sourceTree = "<absolute>"; };
+		6DD4C28D1B20282C003C87F2 /* Vec3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vec3d.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_01_Billiard/GPcode07_01_Attraction/Vec3d.cpp; sourceTree = "<absolute>"; };
+		6DD4C28E1B20282C003C87F2 /* Vec3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vec3d.h; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_01_Billiard/GPcode07_01_Attraction/Vec3d.h; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,20 +80,21 @@
 		6D393CD81B1ECF0500D7C36D /* XcodeBilliard */ = {
 			isa = PBXGroup;
 			children = (
-				6D393CE01B1ECF2700D7C36D /* DynamicSimulator.cpp */,
-				6D393CE11B1ECF2700D7C36D /* DynamicSimulator.h */,
-				6D393CE21B1ECF2700D7C36D /* main.cpp */,
-				6D393CE31B1ECF2700D7C36D /* Particle.cpp */,
-				6D393CE41B1ECF2700D7C36D /* Particle.h */,
-				6D393CE51B1ECF2700D7C36D /* Simulator.cpp */,
-				6D393CE61B1ECF2700D7C36D /* Simulator.h */,
-				6D393CE71B1ECF2700D7C36D /* StopWatch.cpp */,
-				6D393CE81B1ECF2700D7C36D /* StopWatch.h */,
-				6D393CE91B1ECF2700D7C36D /* Vec3d.cpp */,
-				6D393CEA1B1ECF2700D7C36D /* Vec3d.h */,
+				6DD4C2841B20282C003C87F2 /* DynamicSimulator.cpp */,
+				6DD4C2851B20282C003C87F2 /* DynamicSimulator.h */,
+				6DD4C2861B20282C003C87F2 /* main.cpp */,
+				6DD4C2871B20282C003C87F2 /* Particle.cpp */,
+				6DD4C2881B20282C003C87F2 /* Particle.h */,
+				6DD4C2891B20282C003C87F2 /* Simulator.cpp */,
+				6DD4C28A1B20282C003C87F2 /* Simulator.h */,
+				6DD4C28B1B20282C003C87F2 /* StopWatch.cpp */,
+				6DD4C28C1B20282C003C87F2 /* StopWatch.h */,
+				6DD4C28D1B20282C003C87F2 /* Vec3d.cpp */,
+				6DD4C28E1B20282C003C87F2 /* Vec3d.h */,
 			);
-			path = XcodeBilliard;
-			sourceTree = "<group>";
+			name = XcodeBilliard;
+			path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_01_Billiard/GPcode07_01_Attraction/XcodeBilliard;
+			sourceTree = "<absolute>";
 		};
 /* End PBXGroup section */
 
@@ -151,12 +152,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D393CEC1B1ECF2700D7C36D /* main.cpp in Sources */,
-				6D393CEF1B1ECF2700D7C36D /* StopWatch.cpp in Sources */,
-				6D393CED1B1ECF2700D7C36D /* Particle.cpp in Sources */,
-				6D393CEE1B1ECF2700D7C36D /* Simulator.cpp in Sources */,
-				6D393CEB1B1ECF2700D7C36D /* DynamicSimulator.cpp in Sources */,
-				6D393CF01B1ECF2700D7C36D /* Vec3d.cpp in Sources */,
+				6DD4C2901B20282C003C87F2 /* main.cpp in Sources */,
+				6DD4C2931B20282C003C87F2 /* StopWatch.cpp in Sources */,
+				6DD4C2911B20282C003C87F2 /* Particle.cpp in Sources */,
+				6DD4C2921B20282C003C87F2 /* Simulator.cpp in Sources */,
+				6DD4C28F1B20282C003C87F2 /* DynamicSimulator.cpp in Sources */,
+				6DD4C2941B20282C003C87F2 /* Vec3d.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +274,7 @@
 				6D393CDF1B1ECF0500D7C36D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

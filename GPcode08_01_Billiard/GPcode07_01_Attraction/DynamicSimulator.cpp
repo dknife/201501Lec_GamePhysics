@@ -137,7 +137,7 @@ void CDynamicSimulator::collisionHandler(int i, int j) {
 
 void CDynamicSimulator::floorDrag(void) {
     CVec3d vel, dragForce;
-    double drag = 0.05;
+    double drag = 0.1;
     for(int i=0;i<NUMBALLS;i++) {
         vel = balls[i].getVelocity();
         dragForce = -drag*vel;
@@ -152,7 +152,7 @@ void CDynamicSimulator::cushion(void) {
         CVec3d vel; vel = balls[i].getVelocity();
         CVec3d N;
         double r = balls[i].getRadius();
-        double pene = 0.0;
+        double pene = -1.0;
         if(pos.x + r > TABLE_W/2.0) {
             pene = pos.x + r - TABLE_W/2.0;
             N.set(-1.0, 0, 0);
@@ -169,10 +169,19 @@ void CDynamicSimulator::cushion(void) {
             pene = -TABLE_H/2.0 - pos.z + r;
             N.set(0.0, 0.0, 1.0);
         }
-    
-        double vN = vel^N;
-        if (vN<0.0) { // penetrating
-            vel = vel - (2.0 * vN)*N;
+        else {
+            continue;
+        }
+       
+        
+        double vDotN = vel^N;
+        
+        CVec3d vTangent;
+        vTangent = vel - vDotN*N;
+        //vTangent = vTangent
+        
+        if (vDotN<0.0) { // penetrating
+            vel = vel - (2.0 * vDotN)*N;
         }
         pos = pos + (2.0*pene)*N;
         balls[i].setVelocity(vel.x, vel.y, vel.z);
