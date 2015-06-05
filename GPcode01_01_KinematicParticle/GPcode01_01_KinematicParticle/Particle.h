@@ -14,10 +14,10 @@
 #include <GL/glut.h>
 #endif
 
-#include "Vec3f.h"
+#include "Vec3d.h"
 
 class CParticle {
-    CVec3f center;
+    CVec3d center;
     float radius;
     
 public:

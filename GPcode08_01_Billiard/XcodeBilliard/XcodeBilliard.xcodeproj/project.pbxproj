@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6D393CF31B1ECF3400D7C36D /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D393CF11B1ECF3400D7C36D /* GLUT.framework */; };
+		6D393CF41B1ECF3400D7C36D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D393CF21B1ECF3400D7C36D /* OpenGL.framework */; };
+		6DD4C28F1B20282C003C87F2 /* DynamicSimulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DD4C2841B20282C003C87F2 /* DynamicSimulator.cpp */; };
+		6DD4C2901B20282C003C87F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DD4C2861B20282C003C87F2 /* main.cpp */; };
+		6DD4C2911B20282C003C87F2 /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DD4C2871B20282C003C87F2 /* Particle.cpp */; };
+		6DD4C2921B20282C003C87F2 /* Simulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DD4C2891B20282C003C87F2 /* Simulator.cpp */; };
+		6DD4C2931B20282C003C87F2 /* StopWatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DD4C28B1B20282C003C87F2 /* StopWatch.cpp */; };
+		6DD4C2941B20282C003C87F2 /* Vec3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DD4C28D1B20282C003C87F2 /* Vec3d.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6D393CD41B1ECF0500D7C36D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6D393CD61B1ECF0500D7C36D /* XcodeBilliard */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XcodeBilliard; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D393CF11B1ECF3400D7C36D /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		6D393CF21B1ECF3400D7C36D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		6DD4C2841B20282C003C87F2 /* DynamicSimulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DynamicSimulator.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_01_Billiard/GPcode07_01_Attraction/DynamicSimulator.cpp; sourceTree = "<absolute>"; };
+		6DD4C2851B20282C003C87F2 /* DynamicSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DynamicSimulator.h; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_01_Billiard/GPcode07_01_Attraction/DynamicSimulator.h; sourceTree = "<absolute>"; };
+		6DD4C2861B20282C003C87F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_01_Billiard/GPcode07_01_Attraction/main.cpp; sourceTree = "<absolute>"; };
+		6DD4C2871B20282C003C87F2 /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Particle.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_01_Billiard/GPcode07_01_Attraction/Particle.cpp; sourceTree = "<absolute>"; };
+		6DD4C2881B20282C003C87F2 /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Particle.h; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_01_Billiard/GPcode07_01_Attraction/Particle.h; sourceTree = "<absolute>"; };
+		6DD4C2891B20282C003C87F2 /* Simulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Simulator.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_01_Billiard/GPcode07_01_Attraction/Simulator.cpp; sourceTree = "<absolute>"; };
+		6DD4C28A1B20282C003C87F2 /* Simulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Simulator.h; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_01_Billiard/GPcode07_01_Attraction/Simulator.h; sourceTree = "<absolute>"; };
+		6DD4C28B1B20282C003C87F2 /* StopWatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StopWatch.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_01_Billiard/GPcode07_01_Attraction/StopWatch.cpp; sourceTree = "<absolute>"; };
+		6DD4C28C1B20282C003C87F2 /* StopWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StopWatch.h; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_01_Billiard/GPcode07_01_Attraction/StopWatch.h; sourceTree = "<absolute>"; };
+		6DD4C28D1B20282C003C87F2 /* Vec3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vec3d.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_01_Billiard/GPcode07_01_Attraction/Vec3d.cpp; sourceTree = "<absolute>"; };
+		6DD4C28E1B20282C003C87F2 /* Vec3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vec3d.h; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_01_Billiard/GPcode07_01_Attraction/Vec3d.h; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D393CD31B1ECF0500D7C36D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D393CF31B1ECF3400D7C36D /* GLUT.framework in Frameworks */,
+				6D393CF41B1ECF3400D7C36D /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6D393CCD1B1ECF0500D7C36D = {
+			isa = PBXGroup;
+			children = (
+				6D393CF11B1ECF3400D7C36D /* GLUT.framework */,
+				6D393CF21B1ECF3400D7C36D /* OpenGL.framework */,
+				6D393CD81B1ECF0500D7C36D /* XcodeBilliard */,
+				6D393CD71B1ECF0500D7C36D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6D393CD71B1ECF0500D7C36D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D393CD61B1ECF0500D7C36D /* XcodeBilliard */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D393CD81B1ECF0500D7C36D /* XcodeBilliard */ = {
+			isa = PBXGroup;
+			children = (
+				6DD4C2841B20282C003C87F2 /* DynamicSimulator.cpp */,
+				6DD4C2851B20282C003C87F2 /* DynamicSimulator.h */,
+				6DD4C2861B20282C003C87F2 /* main.cpp */,
+				6DD4C2871B20282C003C87F2 /* Particle.cpp */,
+				6DD4C2881B20282C003C87F2 /* Particle.h */,
+				6DD4C2891B20282C003C87F2 /* Simulator.cpp */,
+				6DD4C28A1B20282C003C87F2 /* Simulator.h */,
+				6DD4C28B1B20282C003C87F2 /* StopWatch.cpp */,
+				6DD4C28C1B20282C003C87F2 /* StopWatch.h */,
+				6DD4C28D1B20282C003C87F2 /* Vec3d.cpp */,
+				6DD4C28E1B20282C003C87F2 /* Vec3d.h */,
+			);
+			name = XcodeBilliard;
+			path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_01_Billiard/GPcode07_01_Attraction/XcodeBilliard;
+			sourceTree = "<absolute>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6D393CD51B1ECF0500D7C36D /* XcodeBilliard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D393CDD1B1ECF0500D7C36D /* Build configuration list for PBXNativeTarget "XcodeBilliard" */;
+			buildPhases = (
+				6D393CD21B1ECF0500D7C36D /* Sources */,
+				6D393CD31B1ECF0500D7C36D /* Frameworks */,
+				6D393CD41B1ECF0500D7C36D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XcodeBilliard;
+			productName = XcodeBilliard;
+			productReference = 6D393CD61B1ECF0500D7C36D /* XcodeBilliard */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6D393CCE1B1ECF0500D7C36D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "young-min kang";
+				TargetAttributes = {
+					6D393CD51B1ECF0500D7C36D = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = 6D393CD11B1ECF0500D7C36D /* Build configuration list for PBXProject "XcodeBilliard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6D393CCD1B1ECF0500D7C36D;
+			productRefGroup = 6D393CD71B1ECF0500D7C36D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D393CD51B1ECF0500D7C36D /* XcodeBilliard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D393CD21B1ECF0500D7C36D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DD4C2901B20282C003C87F2 /* main.cpp in Sources */,
+				6DD4C2931B20282C003C87F2 /* StopWatch.cpp in Sources */,
+				6DD4C2911B20282C003C87F2 /* Particle.cpp in Sources */,
+				6DD4C2921B20282C003C87F2 /* Simulator.cpp in Sources */,
+				6DD4C28F1B20282C003C87F2 /* DynamicSimulator.cpp in Sources */,
+				6DD4C2941B20282C003C87F2 /* Vec3d.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6D393CDB1B1ECF0500D7C36D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6D393CDC1B1ECF0500D7C36D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6D393CDE1B1ECF0500D7C36D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6D393CDF1B1ECF0500D7C36D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D393CD11B1ECF0500D7C36D /* Build configuration list for PBXProject "XcodeBilliard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D393CDB1B1ECF0500D7C36D /* Debug */,
+				6D393CDC1B1ECF0500D7C36D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D393CDD1B1ECF0500D7C36D /* Build configuration list for PBXNativeTarget "XcodeBilliard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D393CDE1B1ECF0500D7C36D /* Debug */,
+				6D393CDF1B1ECF0500D7C36D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6D393CCE1B1ECF0500D7C36D /* Project object */;
+}

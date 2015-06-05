@@ -1,7 +1,7 @@
 #include "Particle.h"
 
 CParticle::CParticle() {
-    radius = 1.0f;
+    radius = 0.1f;
     center.set(0.0, 0.0, 0.0);
 }
 

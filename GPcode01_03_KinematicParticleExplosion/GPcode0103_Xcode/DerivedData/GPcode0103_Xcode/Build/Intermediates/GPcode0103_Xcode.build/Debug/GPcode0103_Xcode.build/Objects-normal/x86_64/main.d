@@ -1,0 +1,7 @@
+dependencies: \
+  /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode01_03_KinematicParticleExplosion/GPcode01_03_KinematicParticleExplosion/main.cpp \
+  /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode01_03_KinematicParticleExplosion/GPcode01_03_KinematicParticleExplosion/StopWatch.h \
+  /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode01_03_KinematicParticleExplosion/GPcode01_03_KinematicParticleExplosion/KinematicsSimulator.h \
+  /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode01_03_KinematicParticleExplosion/GPcode01_03_KinematicParticleExplosion/Simulator.h \
+  /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode01_03_KinematicParticleExplosion/GPcode01_03_KinematicParticleExplosion/Particle.h \
+  /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode01_03_KinematicParticleExplosion/GPcode01_03_KinematicParticleExplosion/Vec3d.h
