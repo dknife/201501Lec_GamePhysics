@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>FA864627-DA8F-44B8-A219-46FD1A456E13</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>XCode</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>E3397D5260AC861F5B16468C4282A1C92E043EC1</key>
 		<string>https://github.com/dknife/201501Lec_GamePhysics.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>GPcode08_02_Billiard2/XCode/XCode.xcodeproj/project.xcworkspace</string>
+	<string>GPcode08_02_Billiard2/XCode/XCode.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>E3397D5260AC861F5B16468C4282A1C92E043EC1</key>

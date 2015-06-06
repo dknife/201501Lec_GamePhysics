@@ -93,6 +93,44 @@ void CDynamicSimulator::visualize(void) {
         glVertex3f(pos.x, pos.y, pos.z);
         glVertex3f(pos.x+aim.x*2000.0, pos.y+aim.y*2000.0, pos.z+aim.z*2000.0);
         glEnd();
+        
+        if(turn==0) glColor3f(1.0, 1.0, 1.0);
+        else glColor3f(1.0, 1.0, 0.0);
+        glBegin(GL_POLYGON);
+        for(int i=0;i<100;i++) {
+            double angle = 2.0*3.141592*i/100.0;
+            glVertex3d(TABLE_W*4.0/5.0 + 300.0*cos(angle), 0, 300.0*sin(angle));
+        }
+        glEnd();
+        
+        
+        
+        double powerX =  TABLE_W/2.0 + 30.0;
+        double powerZ = -TABLE_H*2.0/10.0;
+        double powerW = 750.0;
+        double powerH = 20.0;
+        glColor3f(1.0, 1.0, 0.0);
+        glPointSize(10);
+        glBegin(GL_QUADS);
+        glVertex3d(powerX, 0, powerZ);
+        glVertex3d(powerX, 0, powerZ+powerH);
+        glVertex3d(powerX+powerW, 0, powerZ+powerH);
+        glVertex3d(powerX+powerW, 0, powerZ);
+        glEnd();
+        
+        glColor3f(1.0, 0.0, 0.0);
+        glBegin(GL_QUADS);
+        glVertex3d(powerX, 10, powerZ);
+        glVertex3d(powerX, 10, powerZ+powerH);
+        glVertex3d(powerX+powerW*shotPower, 10, powerZ+powerH);
+        glVertex3d(powerX+powerW*shotPower, 10, powerZ);
+        glEnd();
+      
+        glColor3f(1.0, 0.0, 0.0);
+        glPointSize(10);
+        glBegin(GL_POINTS);
+        glVertex3d(TABLE_W*4.0/5.0 + 300.0*shotSpin, 10, 0);
+        glEnd();
     }
 }
 
@@ -113,13 +151,25 @@ void CDynamicSimulator::collisionHandler(int i, int j) {
 		N.normalize();
         CVec3d v1; v1 = balls[i].getVelocity();
         CVec3d v2; v2 = balls[j].getVelocity();
+        float v1Mag = v1.len();
+        float v2Mag = v2.len();
+        
 		double v1N = v1 ^ N; // velocity along the line of action
 		double v2N = v2 ^ N; // velocity along the line of action
 		double m1 = balls[i].getMass();
 		double m2 = balls[j].getMass();
+        double s1 = balls[i].getSpin();
+        double s2 = balls[j].getSpin();
 		// approaching ?
 		if( v1N-v2N < 0 ) { // approaching
             double vr = v1N - v2N;
+            double s2add = 0.5*s1*(-vr/(-vr+v1Mag));
+            double s1add = 0.5*s2*(-vr/(-vr+v2Mag));
+            s1 += s1add;
+            s2 += s2add;
+            
+            balls[i].setSpin(s1);
+            balls[j].setSpin(s2);
             double J = -vr*(e+1.0)/(1.0/m1 + 1.0/m2);
 			double v1New = v1N + J/m1;
             double v2New = v2N - J/m2;
@@ -175,12 +225,12 @@ void CDynamicSimulator::cushion(void) {
        
         
         double vDotN = vel^N;
-        
-        CVec3d spin(0,1,0);
+        double s = balls[i].getSpin();
+        CVec3d spin(0,s,0);
         CVec3d vTangent;
         CVec3d vTangentAdd;
         vTangent = vel - vDotN*N;
-        vTangentAdd = 0.125*vDotN*(N*spin);
+        vTangentAdd = 0.3*vDotN*(N*spin);
         
         
         
@@ -203,14 +253,28 @@ void CDynamicSimulator::rotateAim(double angle) {
     if(aimAngle>3.141592*2.0) aimAngle-=3.141592*2.0;
     aim.set(cos(aimAngle), 0.0, sin(aimAngle));
 }
+void CDynamicSimulator::increaseShotSpin(double spinAdd) {
+    shotSpin+=spinAdd;
+    if(shotSpin>1.0) shotSpin=1.0;
+    if(shotSpin<-1.0) shotSpin=-1.0;
+}
+void CDynamicSimulator::increaseShotPower(double pAdd) {
+    shotPower+=pAdd;
+    if(shotPower>1.0) shotPower=1.0;
+    if(shotPower<0.0) shotPower=0.0;
+}
 
 void CDynamicSimulator::shot(void) {
-    balls[turn*2].setVelocity(5000*aim.x, 0.0, 5000*aim.z);
+    balls[turn*2].setVelocity(5000*shotPower*aim.x, 0.0, 5000*shotPower*aim.z);
+    balls[turn*2].setSpin(shotSpin);
     mode = SIMULATING;
 }
 
 void CDynamicSimulator::turnOver(void) {
-    for(int i=0;i<NUMBALLS;i++) balls[i].setVelocity(0.0, 0.0, 0.0);
+    for(int i=0;i<NUMBALLS;i++) {
+        balls[i].setVelocity(0.0, 0.0, 0.0);
+        balls[i].setSpin(0.0);
+    }
     turn = turn==PLAYER1?PLAYER2:PLAYER1;
     mode = TURNOVER;
 }

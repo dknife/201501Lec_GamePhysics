@@ -4,6 +4,7 @@
 CParticle::CParticle() {
     radius = 1.0f;
     loc.set(0.0, 0.0, 0.0);
+    spin = 0.0;
 }
 
 void CParticle::setPosition(double x, double y, double z) {
@@ -16,12 +17,13 @@ void CParticle::setVelocity(double vx, double vy, double vz) {
 void CParticle::setMass  (double m) { mass = m; }
 void CParticle::setRadius(double r) { radius = r; }
 void CParticle::setColor (double r, double g, double b) { color.set(r,g,b); }
+void CParticle::setSpin(double s) { spin = s; }
 
 CVec3d CParticle::getPosition() { return loc ; }
 CVec3d CParticle::getVelocity() { return vel ; }
 double CParticle::getMass()     { return mass; }
 double CParticle::getRadius()   { return radius; }
-
+double CParticle::getSpin()     { return spin; }
 
 void CParticle::drawWithGL(int drawMode) {
     glColor3f(color.x, color.y, color.z);

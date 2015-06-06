@@ -89,6 +89,10 @@ void key_aiming(unsigned char key) {
         case 'm': ((CDynamicSimulator *)Simulator)->rotateAim(-0.01);break;
         case '/': ((CDynamicSimulator *)Simulator)->rotateAim( 0.01);break;
         case ' ': ((CDynamicSimulator *)Simulator)->shot();break;
+        case ']': ((CDynamicSimulator *)Simulator)->increaseShotSpin( 0.1); break;
+        case '[': ((CDynamicSimulator *)Simulator)->increaseShotSpin(-0.1); break;
+        case 'p': ((CDynamicSimulator *)Simulator)->increaseShotPower( 0.1); break;
+        case 'o': ((CDynamicSimulator *)Simulator)->increaseShotPower(-0.1); break;
     }
 }
 void key_simulating(unsigned char key) {

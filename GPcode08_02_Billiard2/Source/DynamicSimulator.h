@@ -35,6 +35,8 @@ class CDynamicSimulator : public CSimulator {
     MODE mode;
     CVec3d aim;
     float aimAngle;
+    float shotSpin;
+    float shotPower;
     
 public:
     CDynamicSimulator();
@@ -45,8 +47,11 @@ public:
     MODE getMode(void);
     void setMode(MODE m);
     void rotateAim(double angle);
+    void increaseShotSpin(double spinAdd);
+    void increaseShotPower(double powerAdd);
     void shot(void);
     void turnOver(void);
+    
     
 private:
     // Actions to be performed before the simulation frame
