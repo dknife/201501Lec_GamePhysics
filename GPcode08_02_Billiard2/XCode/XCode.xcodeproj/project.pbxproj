@@ -31,17 +31,17 @@
 
 /* Begin PBXFileReference section */
 		6DA349E81B21DF3500DD3883 /* XCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XCode; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DA349F21B21DF6300DD3883 /* DynamicSimulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DynamicSimulator.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/201501Lec_GamePhysics/GPcode08_02_Billiard2/Source/DynamicSimulator.cpp; sourceTree = "<absolute>"; };
-		6DA349F31B21DF6300DD3883 /* DynamicSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DynamicSimulator.h; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/201501Lec_GamePhysics/GPcode08_02_Billiard2/Source/DynamicSimulator.h; sourceTree = "<absolute>"; };
-		6DA349F41B21DF6300DD3883 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/201501Lec_GamePhysics/GPcode08_02_Billiard2/Source/main.cpp; sourceTree = "<absolute>"; };
-		6DA349F51B21DF6300DD3883 /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Particle.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/201501Lec_GamePhysics/GPcode08_02_Billiard2/Source/Particle.cpp; sourceTree = "<absolute>"; };
-		6DA349F61B21DF6300DD3883 /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Particle.h; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/201501Lec_GamePhysics/GPcode08_02_Billiard2/Source/Particle.h; sourceTree = "<absolute>"; };
-		6DA349F71B21DF6300DD3883 /* Simulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Simulator.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/201501Lec_GamePhysics/GPcode08_02_Billiard2/Source/Simulator.cpp; sourceTree = "<absolute>"; };
-		6DA349F81B21DF6300DD3883 /* Simulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Simulator.h; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/201501Lec_GamePhysics/GPcode08_02_Billiard2/Source/Simulator.h; sourceTree = "<absolute>"; };
-		6DA349F91B21DF6300DD3883 /* StopWatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StopWatch.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/201501Lec_GamePhysics/GPcode08_02_Billiard2/Source/StopWatch.cpp; sourceTree = "<absolute>"; };
-		6DA349FA1B21DF6300DD3883 /* StopWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StopWatch.h; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/201501Lec_GamePhysics/GPcode08_02_Billiard2/Source/StopWatch.h; sourceTree = "<absolute>"; };
-		6DA349FB1B21DF6300DD3883 /* Vec3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vec3d.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/201501Lec_GamePhysics/GPcode08_02_Billiard2/Source/Vec3d.cpp; sourceTree = "<absolute>"; };
-		6DA349FC1B21DF6300DD3883 /* Vec3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vec3d.h; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/201501Lec_GamePhysics/GPcode08_02_Billiard2/Source/Vec3d.h; sourceTree = "<absolute>"; };
+		6DA349F21B21DF6300DD3883 /* DynamicSimulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DynamicSimulator.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_02_Billiard2/Source/DynamicSimulator.cpp; sourceTree = "<absolute>"; };
+		6DA349F31B21DF6300DD3883 /* DynamicSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DynamicSimulator.h; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_02_Billiard2/Source/DynamicSimulator.h; sourceTree = "<absolute>"; };
+		6DA349F41B21DF6300DD3883 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_02_Billiard2/Source/main.cpp; sourceTree = "<absolute>"; };
+		6DA349F51B21DF6300DD3883 /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Particle.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_02_Billiard2/Source/Particle.cpp; sourceTree = "<absolute>"; };
+		6DA349F61B21DF6300DD3883 /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Particle.h; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_02_Billiard2/Source/Particle.h; sourceTree = "<absolute>"; };
+		6DA349F71B21DF6300DD3883 /* Simulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Simulator.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_02_Billiard2/Source/Simulator.cpp; sourceTree = "<absolute>"; };
+		6DA349F81B21DF6300DD3883 /* Simulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Simulator.h; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_02_Billiard2/Source/Simulator.h; sourceTree = "<absolute>"; };
+		6DA349F91B21DF6300DD3883 /* StopWatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StopWatch.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_02_Billiard2/Source/StopWatch.cpp; sourceTree = "<absolute>"; };
+		6DA349FA1B21DF6300DD3883 /* StopWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StopWatch.h; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_02_Billiard2/Source/StopWatch.h; sourceTree = "<absolute>"; };
+		6DA349FB1B21DF6300DD3883 /* Vec3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vec3d.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_02_Billiard2/Source/Vec3d.cpp; sourceTree = "<absolute>"; };
+		6DA349FC1B21DF6300DD3883 /* Vec3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vec3d.h; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_02_Billiard2/Source/Vec3d.h; sourceTree = "<absolute>"; };
 		6DA34A031B21DF7A00DD3883 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		6DA34A041B21DF7A00DD3883 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -93,7 +93,7 @@
 				6DA349FC1B21DF6300DD3883 /* Vec3d.h */,
 			);
 			name = XCode;
-			path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/201501Lec_GamePhysics/GPcode08_02_Billiard2/Source/XCode;
+			path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_02_Billiard2/Source/XCode;
 			sourceTree = "<absolute>";
 		};
 /* End PBXGroup section */
