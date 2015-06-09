@@ -5,6 +5,7 @@ CParticle::CParticle() {
     radius = 1.0f;
     loc.set(0.0, 0.0, 0.0);
     spin = 0.0;
+    roll.set(0,0,0);
 }
 
 void CParticle::setPosition(double x, double y, double z) {
@@ -50,7 +51,25 @@ void CParticle::forceIntegration(double dt, double et) {
 void CParticle::simulate(double dt, double et) {
     forceIntegration(dt, et);
     if(this->vel.len()<10) vel.set(0.0,0.0,0.0);
+    double l = roll.len();
+    if(l<0.01) roll.set(0.0, 0.0, 0.0);
+    else {
+        roll.normalize();
+        l -= dt*0.5;
+        if(l<0.0) l=0.0;
+        roll = l * roll;
+    }
+    double spinDrag = 0.5;
+    spin = spin - spinDrag*spin*dt;
 }
 
 void CParticle::resetForce(void) {	this->force.set(0.0, 0.0, 0.0); }
 void CParticle::addForce(CVec3d &f) { this->force = this->force + f; }
+
+void CParticle::setRoll(double x, double z) {
+    roll.set(x, 0.0, z);
+}
+
+CVec3d CParticle::getRoll(void) {
+    return roll;
+}

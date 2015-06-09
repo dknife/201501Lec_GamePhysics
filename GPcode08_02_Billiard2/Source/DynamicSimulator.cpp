@@ -27,15 +27,23 @@ void CDynamicSimulator::init() {
         balls[i].setMass(0.16);
         balls[i].setVelocity(0.0, 0.0, 0.0);
     }
+    
+/*
+    balls[0].setPosition( 10, BALL_RADIUS, -TABLE_H/2.0 + BALL_RADIUS + 300); balls[0].setColor(1.0, 1.0, 1.0);
+    balls[1].setPosition(0, BALL_RADIUS, -TABLE_H/2.0 + BALL_RADIUS); balls[1].setColor(1.0, 0.0, 0.0);
+    balls[2].setPosition( 300, BALL_RADIUS,-3.0*TABLE_H/8.0); balls[2].setColor(1.0, 1.0, 0.0);
+    balls[3].setPosition( 300, BALL_RADIUS,-3.0*TABLE_H/8.0-BALL_RADIUS*2.5); balls[3].setColor(1.0, 0.0, 0.0);
+*/
+    
     balls[0].setPosition( TABLE_W/20.0, BALL_RADIUS, 3.0*TABLE_H/8.0); balls[0].setColor(1.0, 1.0, 1.0);
     balls[1].setPosition(-TABLE_W/20.0, BALL_RADIUS, 3.0*TABLE_H/8.0); balls[1].setColor(1.0, 0.0, 0.0);
     balls[2].setPosition( 0, BALL_RADIUS,-3.0*TABLE_H/8.0); balls[2].setColor(1.0, 1.0, 0.0);
     balls[3].setPosition( 0, BALL_RADIUS,-2.0*TABLE_H/8.0); balls[3].setColor(1.0, 0.0, 0.0);
-
-    
+ 
     
     aim.set(1.0, 0.0, 0.0);
-    
+    shotSpin = topSpin = 0.0;
+    shotPower = 1.0;
 }
 
 void CDynamicSimulator::clean() {
@@ -127,9 +135,9 @@ void CDynamicSimulator::visualize(void) {
         glEnd();
       
         glColor3f(1.0, 0.0, 0.0);
-        glPointSize(10);
+        glPointSize(4);
         glBegin(GL_POINTS);
-        glVertex3d(TABLE_W*4.0/5.0 + 300.0*shotSpin, 10, 0);
+        glVertex3d(TABLE_W*4.0/5.0 + 0.95*300.0*shotSpin, 10, -0.95*300*topSpin);
         glEnd();
     }
 }
@@ -192,6 +200,10 @@ void CDynamicSimulator::floorDrag(void) {
         vel = balls[i].getVelocity();
         dragForce = -drag*vel;
         balls[i].addForce(dragForce);
+
+        CVec3d roll;
+        roll = 200.0*balls[i].getRoll();
+        balls[i].addForce(roll);
     }
 }
 void CDynamicSimulator::cushion(void) {
@@ -230,7 +242,7 @@ void CDynamicSimulator::cushion(void) {
         CVec3d vTangent;
         CVec3d vTangentAdd;
         vTangent = vel - vDotN*N;
-        vTangentAdd = 0.3*vDotN*(N*spin);
+        vTangentAdd = 0.4*vDotN*(N*spin);
         
         
         
@@ -257,7 +269,26 @@ void CDynamicSimulator::increaseShotSpin(double spinAdd) {
     shotSpin+=spinAdd;
     if(shotSpin>1.0) shotSpin=1.0;
     if(shotSpin<-1.0) shotSpin=-1.0;
+    double l = shotSpin*shotSpin+topSpin*topSpin;
+    if(l>1.0) {
+        double sqrL = sqrt(l);
+        shotSpin /= sqrL;
+        topSpin /= sqrL;
+    }
 }
+
+void CDynamicSimulator::increaseTopSpin(double spinAdd) {
+    topSpin+=spinAdd;
+    if(topSpin>1.0) shotSpin=1.0;
+    if(topSpin<-1.0) shotSpin=-1.0;
+    double l = shotSpin*shotSpin+topSpin*topSpin;
+    if(l>1.0) {
+        double sqrL = sqrt(l);
+        shotSpin /= sqrL;
+        topSpin /= sqrL;
+    }
+}
+
 void CDynamicSimulator::increaseShotPower(double pAdd) {
     shotPower+=pAdd;
     if(shotPower>1.0) shotPower=1.0;
@@ -267,6 +298,12 @@ void CDynamicSimulator::increaseShotPower(double pAdd) {
 void CDynamicSimulator::shot(void) {
     balls[turn*2].setVelocity(5000*shotPower*aim.x, 0.0, 5000*shotPower*aim.z);
     balls[turn*2].setSpin(shotSpin);
+    
+    double localRollX = topSpin;
+    double localRollZ = 0.0; //shotSpin*topSpin;
+    double rollX = aim.x * localRollX - aim.z * localRollZ;
+    double rollZ = aim.z * localRollX + aim.x * localRollZ;
+    balls[turn*2].setRoll(rollX, rollZ);
     mode = SIMULATING;
 }
 
@@ -274,6 +311,7 @@ void CDynamicSimulator::turnOver(void) {
     for(int i=0;i<NUMBALLS;i++) {
         balls[i].setVelocity(0.0, 0.0, 0.0);
         balls[i].setSpin(0.0);
+        balls[i].setRoll(0.0, 0.0);
     }
     turn = turn==PLAYER1?PLAYER2:PLAYER1;
     mode = TURNOVER;
