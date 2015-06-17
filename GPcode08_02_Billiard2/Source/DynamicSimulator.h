@@ -10,6 +10,7 @@
 
 #include "Simulator.h"
 #include "Particle.h"
+#include "TextureManager.h"
 
 #define NUMBALLS 4
 #define TABLE_W 1420
@@ -39,10 +40,12 @@ class CDynamicSimulator : public CSimulator {
     float shotSpin;
     float topSpin;
     float shotPower;
-
+    
+    CTextureManager texMgr;
     
 public:
     CDynamicSimulator();
+    ~CDynamicSimulator() {}
     
     void init(void);
     void clean(void);

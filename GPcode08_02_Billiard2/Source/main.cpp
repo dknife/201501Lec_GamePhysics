@@ -36,6 +36,7 @@ void setupOpenGL(int *argcPtr, char *argv[], char title[], int sizeX, int sizeY)
 	glutInitWindowSize(sizeX, sizeY);
 	glutCreateWindow(title);
 	glEnable(GL_DEPTH_TEST);
+    glDepthFunc(GL_LEQUAL);
 }
 
 
@@ -69,7 +70,7 @@ void reshapeFunction(int w, int h) {
 	glLoadIdentity();
 	glViewport(0, 0, w, h);
     //gluPerspective(60, ratio, 0.1, 5000);
-    glOrtho(-1500*ratio, 1500*ratio, -1500, 1500, -1000, 1000);
+    glOrtho(-1600*ratio, 1600*ratio, -1600, 1600, -1000, 1000);
 	glMatrixMode(GL_MODELVIEW);
 }
 

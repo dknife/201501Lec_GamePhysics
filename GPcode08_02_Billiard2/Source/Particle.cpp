@@ -27,6 +27,8 @@ double CParticle::getRadius()   { return radius; }
 double CParticle::getSpin()     { return spin; }
 
 void CParticle::drawWithGL(int drawMode) {
+    
+    /*
     glColor3f(color.x, color.y, color.z);
 
     glPushMatrix();
@@ -39,6 +41,21 @@ void CParticle::drawWithGL(int drawMode) {
         glVertex3f(0,0,0);
         glEnd();
     }
+    glPopMatrix();*/
+    
+    glColor3f(color.x, color.y, color.z);
+    glPushMatrix();
+    glTranslated(loc[0], loc[1], loc[2]);
+    glBegin(GL_QUADS);
+    glTexCoord2d(0, 0);
+    glVertex3f(-radius, 10.0, -radius);
+    glTexCoord2d(0, 1);
+    glVertex3f(-radius, 10.0,  radius);
+    glTexCoord2d(1, 1);
+    glVertex3f( radius, 10.0,  radius);
+    glTexCoord2d(1, 0);
+    glVertex3f( radius, 10.0, -radius);
+    glEnd();
     glPopMatrix();
 }
 
@@ -50,13 +67,24 @@ void CParticle::forceIntegration(double dt, double et) {
 
 void CParticle::simulate(double dt, double et) {
     forceIntegration(dt, et);
-    if(this->vel.len()<10) vel.set(0.0,0.0,0.0);
+    
+    CVec3d ballDir; ballDir.set(0.0, 0.0, 0.0);
+    double v = vel.len();
+    if(v<20) {
+        vel.set(0.0,0.0,0.0);
+    }
+    else {
+        ballDir = vel;
+        ballDir.normalize();
+    }
+    
     double l = roll.len();
     if(l<0.01) roll.set(0.0, 0.0, 0.0);
     else {
         roll.normalize();
         l -= dt*0.5;
         if(l<0.0) l=0.0;
+        
         roll = l * roll;
     }
     double spinDrag = 0.5;

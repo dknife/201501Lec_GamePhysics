@@ -15,6 +15,8 @@
 		6DA34A021B21DF6300DD3883 /* Vec3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DA349FB1B21DF6300DD3883 /* Vec3d.cpp */; };
 		6DA34A051B21DF7A00DD3883 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA34A031B21DF7A00DD3883 /* GLUT.framework */; };
 		6DA34A061B21DF7A00DD3883 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA34A041B21DF7A00DD3883 /* OpenGL.framework */; };
+		6DB2D2221B280BE6002BCB38 /* STBImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DB2D2201B280BE6002BCB38 /* STBImage.cpp */; };
+		6DB2D2251B280C62002BCB38 /* TextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DB2D2231B280C62002BCB38 /* TextureManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +46,10 @@
 		6DA349FC1B21DF6300DD3883 /* Vec3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vec3d.h; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_02_Billiard2/Source/Vec3d.h; sourceTree = "<absolute>"; };
 		6DA34A031B21DF7A00DD3883 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		6DA34A041B21DF7A00DD3883 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		6DB2D2201B280BE6002BCB38 /* STBImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STBImage.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_02_Billiard2/Source/STBImage.cpp; sourceTree = "<absolute>"; };
+		6DB2D2211B280BE6002BCB38 /* STBImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STBImage.h; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_02_Billiard2/Source/STBImage.h; sourceTree = "<absolute>"; };
+		6DB2D2231B280C62002BCB38 /* TextureManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TextureManager.cpp; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_02_Billiard2/Source/TextureManager.cpp; sourceTree = "<absolute>"; };
+		6DB2D2241B280C62002BCB38 /* TextureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextureManager.h; path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_02_Billiard2/Source/TextureManager.h; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,8 @@
 		6DA349EA1B21DF3500DD3883 /* XCode */ = {
 			isa = PBXGroup;
 			children = (
+				6DB2D2201B280BE6002BCB38 /* STBImage.cpp */,
+				6DB2D2211B280BE6002BCB38 /* STBImage.h */,
 				6DA349F21B21DF6300DD3883 /* DynamicSimulator.cpp */,
 				6DA349F31B21DF6300DD3883 /* DynamicSimulator.h */,
 				6DA349F41B21DF6300DD3883 /* main.cpp */,
@@ -91,6 +99,8 @@
 				6DA349FA1B21DF6300DD3883 /* StopWatch.h */,
 				6DA349FB1B21DF6300DD3883 /* Vec3d.cpp */,
 				6DA349FC1B21DF6300DD3883 /* Vec3d.h */,
+				6DB2D2231B280C62002BCB38 /* TextureManager.cpp */,
+				6DB2D2241B280C62002BCB38 /* TextureManager.h */,
 			);
 			name = XCode;
 			path = /Users/ymkang/myWork_iMac/Mac_2_Lectures/2015Lec_GamePhysics/GPcode08_02_Billiard2/Source/XCode;
@@ -158,6 +168,8 @@
 				6DA34A001B21DF6300DD3883 /* Simulator.cpp in Sources */,
 				6DA349FD1B21DF6300DD3883 /* DynamicSimulator.cpp in Sources */,
 				6DA34A021B21DF6300DD3883 /* Vec3d.cpp in Sources */,
+				6DB2D2221B280BE6002BCB38 /* STBImage.cpp in Sources */,
+				6DB2D2251B280C62002BCB38 /* TextureManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
