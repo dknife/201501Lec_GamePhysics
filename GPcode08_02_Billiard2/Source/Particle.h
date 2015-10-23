@@ -27,6 +27,7 @@ public:
     double radius;
 	double mass;
     double spin;
+    CVec3d roll;
     
     CVec3d loc, vel, force, gravity;
     CVec3d color;
@@ -43,12 +44,15 @@ public:
     void setRadius(double r);
     void setColor(double r, double g, double b);
     void setSpin(double);
+    void setRoll(double x, double z);
     
 	CVec3d getPosition();
 	CVec3d getVelocity();
 	double getMass();
 	double getRadius();
     double getSpin();
+    
+    CVec3d getRoll(void);
 	
 
 	void resetForce(void);

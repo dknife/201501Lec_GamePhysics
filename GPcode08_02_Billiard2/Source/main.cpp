@@ -36,6 +36,7 @@ void setupOpenGL(int *argcPtr, char *argv[], char title[], int sizeX, int sizeY)
 	glutInitWindowSize(sizeX, sizeY);
 	glutCreateWindow(title);
 	glEnable(GL_DEPTH_TEST);
+    glDepthFunc(GL_LEQUAL);
 }
 
 
@@ -69,7 +70,7 @@ void reshapeFunction(int w, int h) {
 	glLoadIdentity();
 	glViewport(0, 0, w, h);
     //gluPerspective(60, ratio, 0.1, 5000);
-    glOrtho(-1500*ratio, 1500*ratio, -1500, 1500, -1000, 1000);
+    glOrtho(-1600*ratio, 1600*ratio, -1600, 1600, -1000, 1000);
 	glMatrixMode(GL_MODELVIEW);
 }
 
@@ -89,8 +90,10 @@ void key_aiming(unsigned char key) {
         case 'm': ((CDynamicSimulator *)Simulator)->rotateAim(-0.01);break;
         case '/': ((CDynamicSimulator *)Simulator)->rotateAim( 0.01);break;
         case ' ': ((CDynamicSimulator *)Simulator)->shot();break;
-        case ']': ((CDynamicSimulator *)Simulator)->increaseShotSpin( 0.1); break;
-        case '[': ((CDynamicSimulator *)Simulator)->increaseShotSpin(-0.1); break;
+        case 'd': ((CDynamicSimulator *)Simulator)->increaseShotSpin( 0.1); break;
+        case 'a': ((CDynamicSimulator *)Simulator)->increaseShotSpin(-0.1); break;
+        case 'w': ((CDynamicSimulator *)Simulator)->increaseTopSpin( 0.1); break;
+        case 's': ((CDynamicSimulator *)Simulator)->increaseTopSpin(-0.1); break;
         case 'p': ((CDynamicSimulator *)Simulator)->increaseShotPower( 0.1); break;
         case 'o': ((CDynamicSimulator *)Simulator)->increaseShotPower(-0.1); break;
     }
